@@ -1,0 +1,15 @@
+<div class="menu">
+    <nav class="menu__nav" role="navigation">
+        <ul class="menu__list">
+            {% set menuItems = [
+                ['О проекте', '#about'],
+                ['Преимущества', '#advantages'],
+                ['Тип контрактов', '#contracts'],
+                ['Как начать', '#footer']
+            ] %}
+            {% for item, link in menuItems %}
+                <li class="menu__item"><a href="{{ link }}" class="menu__link">{{ item }}</a></li>
+            {% endfor %}
+        </ul>
+    </nav>
+</div>

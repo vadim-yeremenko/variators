@@ -1,0 +1,102 @@
+.header {
+
+}
+
+.header-fixed {
+    padding-top: 10rem;
+}
+
+.header-bar {
+  display: flex;
+  justify-content: space-between;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  
+  &__left {
+    display: flex;
+  }
+  
+  &__right {
+    display: flex;
+  }
+
+  &__logo {
+    padding: 2.6rem 1rem 2.6rem 5rem;
+    
+    .logo {
+      display: block;
+    }
+  }
+
+  &__basket-btn {
+    @include trs();
+    background-color: $color-white;
+    border: 0;
+    cursor: pointer;
+    height: 10rem;
+    padding: 3.6rem;
+    position: relative;
+    width: 10rem;
+
+    &::before {
+      content: url("../images/basket.svg");
+    }
+
+    @include on-event() {
+      background-color: rgba(#424e5e, 0.1);
+    }
+  }
+
+  &__phone-link {
+    @include trs();
+    color: #515b6a;
+    display: block;
+    font-family: $typo-1;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 3.8rem 6.5rem;
+    position: relative;
+    text-decoration: none;
+
+    &::before {
+      content: url("../images/phone.svg");
+      left: 3.5rem;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    @include on-event() {
+      color: #cb2630;
+    }
+  }
+
+  &__login-link {
+    @include trs();
+    border-left: 0.1rem solid rgba(#424e5e, 0.1);
+    border-right: 0.1rem solid rgba(#424e5e, 0.1);
+    color: #515b6a;
+    display: block;
+    font-family: $typo-1;
+    font-size: 1.4rem;
+    font-weight: 500;
+    height: 100%;
+    padding: 4.2rem 12.5rem 4.1rem 10rem;
+    position: relative;
+    text-decoration: none;
+
+    &::before {
+      content: url("../images/shape.svg");
+      left: 6.4rem;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    @include on-event() {
+      color: #cb2630;
+    }
+  }
+}

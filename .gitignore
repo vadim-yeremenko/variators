@@ -1,0 +1,5 @@
+node_modules
+.idea
+reports
+yarn-error.log
+yarn-debug.log

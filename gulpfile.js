@@ -69,14 +69,12 @@ gulp.task('js', function () {
 });
 
 gulp.task('build', ['imgmin', 'scss'], function() { //Рендеринг проекта для продакшена
-
     gulp.src([
         'src/css/main.css',
     ]).pipe(cleanCSS())
         .pipe(gulp.dest('dist/css'));
-
     gulp.src([
-        'src/fonts/**/*',
+        'src/fonts/*',
     ]).pipe(gulp.dest('dist/fonts'));
 });
 

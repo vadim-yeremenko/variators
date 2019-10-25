@@ -4,85 +4,92 @@ $color-green: #39a38f;
 //$f-exbold: 'open_sans_extraboldregular', sans-serif;
 
 html {
-  font-size: 62.5%;
-  box-sizing: border-box;
+    font-size: 62.5%;
+    box-sizing: border-box;
 
-  *,
-  *::before,
-  *::after {
-    box-sizing: inherit;
-  }
+    *,
+    *::before,
+    *::after {
+        box-sizing: inherit;
+    }
 }
 
 body {
-  font-family: $typo-1;
-  font-weight: 400;
-  padding: 0;
-  margin: 0;
-  overflow-x: hidden;
-  background: $color-white;
-  width: 100%;
+    font-family: $typo-1;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    background: $color-white;
+    width: 100%;
 
 }
 
 %font-regular {
-  font-family: $typo-1;
-  font-size: 10px;
-  color: $color-white;
+    font-family: $typo-1;
+    font-size: 10px;
+    color: $color-white;
 }
 
 %clearfix {
-  &::after {
-    content: '';
-    display: table;
-    width: 100%;
-    clear: both;
-  }
+    &::after {
+        content: '';
+        display: table;
+        width: 100%;
+        clear: both;
+    }
 }
 
 div {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 a:focus,
 button:focus {
-  outline: 0;
+    outline: 0;
 }
 
 .hidden {
-  display: none;
+    display: none;
 }
 
 .site-wrapper-out {
-  margin: 0 auto;
-  box-sizing: border-box;
-  overflow-x: hidden;
+    margin: 0 auto;
+    box-sizing: border-box;
+    position: relative;
 }
 
 .site-wrapper {
-  left: 0;
-  overflow-x: hidden;
-  position: relative;
-  transition: left 0.5s ease;
-  width: 100%;
+    height: 100%;
+    left: 0;
+    position: relative;
+    transition: transform 0.5s;
+    z-index: 99;
 
-  .menu-opened & {
-    left: 53rem;
-  }
+    .menu-opened & {
+        transform: translate3d(53rem, 0, 0);
+    }
+}
+
+.content-wrapper {
+    left: 0;
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
 }
 
 .container {
-  max-width: 117rem;
-  margin: 0 auto;
-  padding: 0 1rem;
-
-  @include breakpoint(medium down) {
-    max-width: 98rem;
-    padding: 0 2rem;
-  }
-
-  @include breakpoint(small down) {
-    max-width: 100%;
+    max-width: 119rem;
+    margin: 0 auto;
     padding: 0 1rem;
-  }
+
+    @include breakpoint(medium down) {
+        max-width: 98rem;
+        padding: 0 2rem;
+    }
+
+    @include breakpoint(small down) {
+        max-width: 100%;
+        padding: 0 1rem;
+    }
 }

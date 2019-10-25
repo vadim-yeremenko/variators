@@ -12,21 +12,23 @@
 </head>
 <body>
 <div class="site-wrapper-out">
-    {% include 'partials/_menu.njk' %}
     <div class="site-wrapper">
-        <header class="site-header" role="banner">
-            {% block header %}
-                {% include 'partials/_header.njk' %}
+        {% include 'partials/_menu.njk' %}
+        <div class="content-wrapper">
+            <header class="site-header" role="banner">
+                {% block header %}
+                    {% include 'partials/_header.njk' %}
+                {% endblock %}
+            </header>
+            <main class="site-main" role="main">
+            {% block content %}{% endblock %}
+            </main>
+            <footer class="site-footer footer" id="footer" role="contentinfo">
+            {% block footer %}
+                {% include 'partials/_footer.njk' %}
             {% endblock %}
-        </header>
-        <main class="site-main" role="main">
-        {% block content %}{% endblock %}
-        </main>
-        <footer class="site-footer footer" id="footer" role="contentinfo">
-        {% block footer %}
-            {% include 'partials/_footer.njk' %}
-        {% endblock %}
-        </footer>
+            </footer>
+        </div>
     </div>
 </div>
 <script src="js/main.js"></script>

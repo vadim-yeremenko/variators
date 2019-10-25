@@ -1,11 +1,18 @@
 <div class="menu">
+    <div class="menu__phone">
+        <a href="tel:84956578800" class="menu__phone-link">8 (495) 657 88 00</a>
+    </div>
     <nav class="menu__nav" role="navigation">
         <ul class="menu__list">
             {% set menuItems = [
-                ['О проекте', '#about'],
-                ['Преимущества', '#advantages'],
-                ['Тип контрактов', '#contracts'],
-                ['Как начать', '#footer']
+                ['Nissan', '#'],
+                ['Mitsubishi', '#'],
+                ['Infiniti', '#'],
+                ['Renault', '#'],
+                ['О компании', '#'],
+                ['Доставка и оплата', '#'],
+                ['Статьи', '#'],
+                ['Личный кабинет', '#']
             ] %}
             {% for item, link in menuItems %}
                 <li class="menu__item"><a href="{{ link }}" class="menu__link">{{ item }}</a></li>

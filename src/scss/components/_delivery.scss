@@ -1,0 +1,42 @@
+.delivery {
+    &__list {
+        display: flex;
+        list-style: none;
+        margin: 0 -1.5rem;
+        padding: 0;
+    }
+
+    &__item {
+        background-color: $color-white;
+        counter-increment: step-counter;
+        margin: 0 1.5rem;
+        padding: 4rem 5rem 5rem 4rem;
+        position: relative;
+
+        &::before {
+            content: '0'counter(step-counter);
+            font-size: 4.2rem;
+            font-weight: 300;
+            opacity: 0.13;
+            position: absolute;
+            right: 3rem;
+            top: 3rem;
+        }
+    }
+
+    &__image {
+        max-height: 6rem;
+    }
+
+    &__title {
+        color: #cb2630;
+        font-size: 2rem;
+        font-weight: 700;
+        margin: 4rem 0 0;
+    }
+
+    &__teaser {
+        font-weight: 500;
+        line-height: 2;
+    }
+}

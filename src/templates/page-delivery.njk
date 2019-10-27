@@ -1,7 +1,34 @@
 {% extends 'layouts/_layout.njk' %}
+{% from 'components/rubric.njk' import rubric with context %}
 
 {% block content %}
-    <section>
-
+    <section class="wrapper-inner">
+        <div class="container -page">
+            {{ rubric(title = 'Доставка и оплата', teaser = false) }}
+            <section class="delivery">
+                <div class="delivery__wrapper">
+                    <ul class="delivery__list">
+                        {% set deliveryItems = [
+                            ['purse', 'Оплата'],
+                            ['auto', 'Доставка'],
+                            ['headphones', 'Гарантия и возврат']
+                        ] %}
+                        {% for img, title in deliveryItems %}
+                            <li class="delivery__item">
+                                <div class="delivery__image">
+                                    <img src="images/{{ img }}.svg" alt="{{ title }}">
+                                </div>
+                                <h2 class="delivery__title">
+                                    {{ title }}
+                                </h2>
+                                <p class="delivery__teaser">
+                                    Кстати, базовые сценарии поведения пользователей, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут описаны максимально подробно. Внезапно, базовые сценарии поведения пользователей, вне зависимости от их уровня, должны быть преданы социально-демократической анафеме.
+                                </p>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </section>
+        </div>
     </section>
 {% endblock %}

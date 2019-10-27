@@ -38,20 +38,24 @@ button:focus {
   display: none; }
 
 .site-wrapper-out {
-  margin: 0 auto;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  position: relative; }
+  margin: 0 auto;
+  min-height: 100vh;
+  position: relative;
+  width: 100%; }
 
 .site-wrapper {
   height: 100%;
   left: 0;
+  min-height: 100vh;
   position: relative;
   -webkit-transition: -webkit-transform 0.5s;
   transition: -webkit-transform 0.5s;
   -o-transition: transform 0.5s;
   transition: transform 0.5s;
   transition: transform 0.5s, -webkit-transform 0.5s;
+  width: 100%;
   z-index: 99; }
   .menu-opened .site-wrapper {
     -webkit-transform: translate3d(53rem, 0, 0);
@@ -62,8 +66,25 @@ button:focus {
             -ms-transform: none;
                 transform: none; } }
 
+.site-main {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  width: 100%; }
+
 .content-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   left: 0;
+  min-height: 100vh;
   overflow-x: hidden;
   position: relative;
   width: 100%; }
@@ -391,7 +412,9 @@ button:focus {
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    padding: 3.5rem 0; }
+    padding: 3.5rem 0;
+    position: relative;
+    z-index: 1; }
     @media screen and (max-width: 767px) {
       .footer__wrapper {
         -webkit-box-align: center;
@@ -738,7 +761,9 @@ button:focus {
         margin-top: 2.8rem; }
 
 .rubric {
-  margin: 0 0 5.5rem; }
+  margin: 0 0 5.5rem;
+  position: relative;
+  z-index: 1; }
   @media screen and (max-width: 767px) {
     .rubric {
       margin-bottom: 3.5rem; } }
@@ -880,39 +905,69 @@ button:focus {
     .article__blockquote {
       margin: 2.7rem 0; } }
 
-.delivery__list {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  list-style: none;
-  margin: 0 -1.5rem;
-  padding: 0; }
-
-.delivery__item {
-  background-color: #fff;
-  counter-increment: step-counter;
-  margin: 0 1.5rem;
-  padding: 4rem 5rem 5rem 4rem;
+.delivery {
   position: relative; }
-  .delivery__item::before {
-    content: "0" counter(step-counter);
-    font-size: 4.2rem;
-    font-weight: 300;
-    opacity: 0.13;
+  .delivery::before {
+    background: url("../images/bg-delivery.png");
+    content: '';
+    height: 85rem;
+    left: 50%;
     position: absolute;
-    right: 3rem;
-    top: 3rem; }
-
-.delivery__image {
-  max-height: 6rem; }
-
-.delivery__title {
-  color: #cb2630;
-  font-size: 2rem;
-  font-weight: 700;
-  margin: 4rem 0 0; }
-
-.delivery__teaser {
-  font-weight: 500;
-  line-height: 2; }
+    top: 0;
+    -webkit-transform: translate(-47%, -12%);
+        -ms-transform: translate(-47%, -12%);
+            transform: translate(-47%, -12%);
+    width: 103rem; }
+  .delivery__list {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    list-style: none;
+    margin: 0 -1.5rem;
+    padding: 0; }
+    @media screen and (max-width: 992px) {
+      .delivery__list {
+        -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap; } }
+  .delivery__item {
+    background-color: #fff;
+    counter-increment: step-counter;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    margin: 0 1.5rem;
+    padding: 4rem 5rem 5rem 4rem;
+    position: relative;
+    width: -webkit-calc(100% / 3 - 3rem);
+    width: calc(100% / 3 - 3rem); }
+    @media screen and (max-width: 992px) {
+      .delivery__item {
+        width: -webkit-calc(50% - 3rem);
+        width: calc(50% - 3rem); }
+        .delivery__item:not(:last-child) {
+          margin-bottom: 3rem; } }
+    @media screen and (max-width: 767px) {
+      .delivery__item {
+        width: 100%; } }
+    .delivery__item::before {
+      content: "0" counter(step-counter);
+      font-size: 4.2rem;
+      font-weight: 300;
+      opacity: 0.13;
+      position: absolute;
+      right: 2.3rem;
+      top: 2.3rem; }
+  .delivery__image {
+    max-height: 6rem; }
+  .delivery__title {
+    color: #cb2630;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 3.3rem 0 0; }
+  .delivery__teaser {
+    font-weight: 500;
+    line-height: 2;
+    margin: 2.2rem 0 0; }

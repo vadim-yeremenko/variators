@@ -54,16 +54,20 @@ button:focus {
 }
 
 .site-wrapper-out {
-    margin: 0 auto;
     box-sizing: border-box;
+    margin: 0 auto;
+    min-height: 100vh;
     position: relative;
+    width: 100%;
 }
 
 .site-wrapper {
     height: 100%;
     left: 0;
+    min-height: 100vh;
     position: relative;
     transition: transform 0.5s;
+    width: 100%;
     z-index: 99;
 
     .menu-opened & {
@@ -75,8 +79,16 @@ button:focus {
     }
 }
 
+.site-main {
+    flex-grow: 1;
+    width: 100%;
+}
+
 .content-wrapper {
+    display: flex;
+    flex-direction: column;
     left: 0;
+    min-height: 100vh;
     overflow-x: hidden;
     position: relative;
     width: 100%;

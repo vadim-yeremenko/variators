@@ -1,17 +1,48 @@
 .delivery {
+    position: relative;
+
+    &::before {
+        background: url('../images/bg-delivery.png');
+        content: '';
+        height: 85rem;
+        left: 50%;
+        position: absolute;
+        top: 0;
+        transform: translate(-47%, -12%);
+        width: 103rem;
+    }
+
     &__list {
         display: flex;
         list-style: none;
         margin: 0 -1.5rem;
         padding: 0;
+
+        @include breakpoint(992) {
+            flex-wrap: wrap;
+        }
     }
 
     &__item {
         background-color: $color-white;
         counter-increment: step-counter;
+        flex-grow: 1;
         margin: 0 1.5rem;
         padding: 4rem 5rem 5rem 4rem;
         position: relative;
+        width: calc(100% / 3 - 3rem);
+
+        @include breakpoint(992) {
+            width: calc(50% - 3rem);
+
+            &:not(:last-child) {
+                margin-bottom: 3rem;
+            }
+        }
+
+        @include breakpoint(767) {
+            width: 100%;
+        }
 
         &::before {
             content: '0'counter(step-counter);
@@ -19,8 +50,8 @@
             font-weight: 300;
             opacity: 0.13;
             position: absolute;
-            right: 3rem;
-            top: 3rem;
+            right: 2.3rem;
+            top: 2.3rem;
         }
     }
 
@@ -32,11 +63,12 @@
         color: #cb2630;
         font-size: 2rem;
         font-weight: 700;
-        margin: 4rem 0 0;
+        margin: 3.3rem 0 0;
     }
 
     &__teaser {
         font-weight: 500;
         line-height: 2;
+        margin: 2.2rem 0 0;
     }
 }

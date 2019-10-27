@@ -1,0 +1,66 @@
+.banner {
+	height: 53rem;
+	overflow: hidden;
+	position: relative;
+
+	&__content {
+		background: rgba(21, 39, 53, 0.8);
+		position: absolute;
+		top: 0;
+		left: 0;
+		padding: 9.4rem 10rem 0 0;
+		width: 50%;
+		height: 100%;
+	}
+
+	&__title {
+		color: #fff;		
+		font-size: 5.8rem;
+		font-weight: 300;
+
+		&.-red {
+			color: $color-1--1;
+			font-weight: 700;
+		}
+	}
+
+	.slick-dots {
+	    display: flex;
+		position: absolute;
+		left: 5%;
+		bottom: 8.2rem;
+	    list-style: none;
+		z-index: 1;
+
+		li {
+			&.slick-active {
+				button {
+					background-color: transparent;
+					border: 3px solid $color-1--1;
+					opacity: 1;
+				}
+			}
+
+			&:not(:last-child) {
+				margin-right: 2.5rem;
+			}
+		}
+
+		button {
+		    border: 3px solid transparent;
+		    background-color: #ced4df;
+		    cursor: pointer;
+			opacity: 0.3;
+		    width: 1.3rem;
+		    height: 1.3rem;
+			font-size: 0;
+		    border-radius: 50%;
+		    padding: 0;
+
+		    @include on-event() {
+		    	background: $color-1--1;
+		    	opacity: 1;
+		    }
+		}
+	}
+}

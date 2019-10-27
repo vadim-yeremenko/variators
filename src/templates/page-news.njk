@@ -1,0 +1,20 @@
+{% extends 'layouts/_layout.njk' %}
+{% from 'components/rubric.njk' import rubric with context %}
+{% from 'components/news-item.njk' import newsItem with context %}
+
+{% block content %}
+    <section class="wrapper-inner">
+        <div class="container -page">
+            {{ rubric(title = 'Статьи') }}
+            <section class="news">
+                <div class="news__wrapper">
+                    <div class="news-block">
+                        {% for item in range(7) %}
+                            {{ newsItem(modifier = '-focus' if loop.index === 1) }}
+                        {% endfor %}
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+{% endblock %}

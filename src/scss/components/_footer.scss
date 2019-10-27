@@ -5,6 +5,8 @@
         display: flex;
         justify-content: space-between;
         padding: 3.5rem 0;
+        position: relative;
+        z-index: 1;
 
         @include breakpoint(767) {
             align-items: center;

@@ -1,5 +1,7 @@
 .rubric {
     margin: 0 0 5.5rem;
+    position: relative;
+    z-index: 1;
 
     @include breakpoint(767) {
         margin-bottom: 3.5rem;

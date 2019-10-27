@@ -1,0 +1,16 @@
+{% macro newsItem(modifier) %}
+    <article class="news-block__item {{ modifier }}">
+        <picture class="news-block__image">
+            <img src="//picsum.photos/569/326?image={{ range(40, 100) | random }}" alt="{{ title }}">
+        </picture>
+        <div class="news-block__content">
+            <p class="news-block__date"><time datetime="2019-05-25">25 Май 2019</time></p>
+            <h2 class="news-block__title">
+                Южноафриканская компания Mureza Auto представила свою первую
+            </h2>
+            <a href="#" class="news-block__link">
+                Подробнее
+            </a>
+        </div>
+    </article>
+{% endmacro %}

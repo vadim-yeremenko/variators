@@ -12,21 +12,25 @@
     @include on-event() {
         background-color: #be252e;
 
-        @include breakpoint(small down) {
+        @include breakpoint(767) {
             background-color: transparent;
         }
     }
 
-    @include breakpoint(small down) {
+    @include breakpoint(767) {
         background-color: transparent;
-        height: 3rem;
-        width: 4.6rem;
+        height: 6rem;
+        width: 6rem;
     }
 
     .menu-opened & {
         #{$this}__line {
             &:first-child {
-                transform: translateY(0.5rem) rotate(45deg)
+                transform: translateY(0.5rem) rotate(45deg);
+
+                @include breakpoint(767) {
+                    transform: translateY(1rem) rotate(45deg);
+                }
             }
 
             &:nth-child(2) {
@@ -54,11 +58,11 @@
         width: 2.1rem;
         transition: all 250ms ease-in-out 0ms;
 
-        @include breakpoint(small down) {
+        @include breakpoint(767) {
             background-color: #cb2630;
             height: 0.4rem;
-            margin-bottom: 0.8rem;
-            width: 4.6rem;
+            margin-bottom: 0.4rem;
+            width: 3rem;
         }
     }
 }
@@ -76,14 +80,28 @@
     width: 53rem;
     z-index: 100;
 
+    @include breakpoint(767) {
+        height: calc(100vh - 6rem);
+        top: 6rem;
+        width: 100%;
+    }
+
     .menu-opened & {
         transition: transform 0.5s;
         visibility: visible;
+
+        @include breakpoint(767) {
+            transform: translate3d(0, 0, 0);
+        }
     }
 
     &__phone {
         background-color: #ae222a;
-        padding: 3.2rem 19.5rem 3.1rem 9rem;
+        padding: 3.7rem 20rem 3.6rem 9rem;
+
+        @include breakpoint(767) {
+            padding: 2.5rem 3.5rem;
+        }
     }
 
     &__phone-link {
@@ -92,12 +110,17 @@
         display: block;
         font-size: 2.2rem;
         font-weight: 700;
-        padding: 0.5rem 0.5rem 0.5rem 4rem;
+        padding: 0 0 0 4rem;
         position: relative;
         text-decoration: none;
 
         @include on-event() {
             color: rgba($color-white, 0.37);
+        }
+
+        @include breakpoint(767) {
+            font-size: 2rem;
+            padding: 0 0 0 3rem;
         }
 
         &::before {
@@ -113,6 +136,10 @@
         list-style: none;
         margin: 0;
         padding: 4.5rem 0;
+
+        @include breakpoint(767) {
+            padding: 2.5rem 0;
+        }
     }
 
     &__link {
@@ -126,6 +153,10 @@
 
         @include on-event() {
             background-color: #ae222a;
+        }
+
+        @include breakpoint(767) {
+            padding: 1.5rem 3.5rem;
         }
     }
 }

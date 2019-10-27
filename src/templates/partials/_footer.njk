@@ -1,26 +1,27 @@
 <div class="container">
     <div class="footer__wrapper">
-        <div class="footer__top">
+        <div class="footer__left">
             <a href="#" class="footer__logo">
                 <img src="images/logo2.png" alt="CVT Brothers">
             </a>
+            <a href="#" class="footer__created">Created by GA</a>
+            {#<a href="#" class="footer__search-link">Поиск по номеру</a>#}
+        </div>
+        <div class="footer__right">
             <div class="footer__menu">
                 <ul class="footer__menu-list">
                     {% set menuItems = [
                         ['О компании', '#'],
                         ['Доставка и оплата', '#'],
                         ['Статьи', '#'],
-                        ['Политика конфиденциальности', '#']
+                        ['Политика конфиденциальности', '#'],
+                        ['Поиск по номеру', '#']
                     ] %}
                     {% for item, link in menuItems %}
                         <li class="footer__menu-item"><a href="{{ link }}">{{ item }}</a></li>
                     {% endfor %}
                 </ul>
             </div>
-            <a href="#" class="footer__search-link">Поиск по номеру</a>
-        </div>
-        <div class="footer__bottom">
-            <a href="#" class="footer__created">Created by GA</a>
             <div class="footer__brands">
                 <ul class="footer__brands-list">
                     {% set menuItems = [

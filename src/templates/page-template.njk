@@ -1,0 +1,12 @@
+{% extends 'layouts/_layout.njk' %}
+{% from 'components/rubric.njk' import rubric with context %}
+{% from 'components/article.njk' import article with context %}
+
+{% block content %}
+    <section class="wrapper-inner">
+        <div class="container -page">
+            {{ rubric() }}
+            {{ article() }}
+        </div>
+    </section>
+{% endblock %}

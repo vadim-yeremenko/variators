@@ -1,0 +1,9 @@
+{% extends 'layouts/_layout.njk' %}
+{% from 'components/brand-text.njk' import brandText with context %}
+
+{% block content %}
+    {% set brandsItems = [ 'Nissan', 'Mitsubishi', 'Infiniti', 'Renault'] %}
+    {% for brand in brandsItems %}
+        {{ brandText(brand) }}
+    {% endfor %}
+{% endblock %}

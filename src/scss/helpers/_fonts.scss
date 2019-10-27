@@ -1,9 +1,6 @@
-// Import fonts
-$import-google-font-1: 'https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,900&display=swap';
+// Import google fonts
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,900&display=swap');
 
-@if variable-exists(import-google-font-1) {
-  @import url($import-google-font-1);
-}
 
 // Import another fonts
 @font-face {

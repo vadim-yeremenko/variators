@@ -1,4 +1,5 @@
 .header {
+    background-color: $color-white;
     display: flex;
     justify-content: space-between;
     left: 0;
@@ -6,6 +7,7 @@
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 100;
 
     &__left {
         align-items: center;
@@ -17,10 +19,17 @@
     }
 
     &__logo {
-        padding: 2.6rem 1rem 2.6rem 5rem;
+        padding: 2.6rem 1rem 2.5rem 5rem;
 
-        @include breakpoint(small down) {
-            padding: 2.6rem 6rem;
+        @include breakpoint(1170) {
+            padding: 2.6rem 1rem 2.5rem 2rem;
+        }
+
+        @include breakpoint(767) {
+            left: 50%;
+            padding: 1rem 2rem;
+            position: absolute;
+            transform: translateX(-50%);
         }
 
         .logo {
@@ -30,17 +39,11 @@
                 img {
                     max-width: 19.4rem;
 
-                    @include breakpoint(small down) {
-                        max-width: 100%;
+                    @include breakpoint(767) {
+                        max-width: 15.4rem;
                     }
                 }
             }
-        }
-    }
-
-    &__menu-btn {
-        @include breakpoint(small down) {
-            padding: 4.7rem 3.4rem;
         }
     }
 
@@ -55,10 +58,10 @@
         position: relative;
         width: 10rem;
 
-        @include breakpoint(small down) {
-            height: auto;
-            padding: 4.25rem 3rem;
-            width: auto;
+        @include breakpoint(767) {
+            height: 6rem;
+            padding: 1.5rem;
+            width: 6rem;
         }
 
         &::before {
@@ -75,9 +78,17 @@
     }
 
     &__phone {
-        padding: 3.3rem 6rem 3.3rem 3.5rem;
+        padding: 3.8rem 6.5rem 3.8rem 3.5rem;
 
-        @include breakpoint(small down) {
+        @include breakpoint(1170) {
+            padding: 3.8rem 3.5rem 3.8rem 3.5rem;
+        }
+
+        @include breakpoint(992) {
+            padding: 3.8rem 2.5rem 3.8rem 2.5rem;
+        }
+        
+        @include breakpoint(767) {
             display: none;
         }
     }
@@ -89,7 +100,7 @@
         font-family: $typo-1;
         font-size: 2rem;
         font-weight: 700;
-        padding: 0.5rem 0.5rem 0.5rem 3rem;
+        padding: 0 0 0 3rem;
         position: relative;
         text-decoration: none;
 
@@ -109,9 +120,17 @@
     &__login {
         border-left: 0.1rem solid rgba(#424e5e, 0.1);
         border-right: 0.1rem solid rgba(#424e5e, 0.1);
-        padding: 3.7rem 12rem 3.6rem 6rem;
+        padding: 4.2rem 12.5rem 4.1rem 6rem;
 
-        @include breakpoint(small down) {
+        @include breakpoint(1170) {
+            padding: 4.2rem 6rem 4.1rem 6rem;
+        }
+
+        @include breakpoint(992) {
+            padding: 4.2rem 2.5rem 4.1rem 2.5rem;
+        }
+        
+        @include breakpoint(900) {
             display: none;
         }
     }
@@ -124,7 +143,7 @@
         font-size: 1.4rem;
         font-weight: 500;
         height: 100%;
-        padding: 0.5rem 0.5rem 0.5rem 4rem;
+        padding: 0 0 0 4rem;
         position: relative;
         text-decoration: none;
 
@@ -145,7 +164,7 @@
 .header-fixed {
     padding-top: 10rem;
 
-    @include breakpoint(small down) {
-        padding-top: 12.4rem;
+    @include breakpoint(767) {
+        padding-top: 6rem;
     }
 }

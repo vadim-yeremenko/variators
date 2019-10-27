@@ -1,0 +1,181 @@
+.brand-text {
+    background-color: $color-white;
+    overflow: hidden;
+    $this: &;
+
+    + .brand-text {
+        margin-top: 7rem;
+    }
+
+    &.-nissan {
+        #{$this}__image {
+            &::before {
+                background: url('../images/logo-nissan.png') no-repeat;
+                background-size: 100%;
+                height: 41.5rem;
+                transform: translate(-40%, -32%);
+                width: 48.7rem;
+
+                @include breakpoint(767) {
+                    height: 25.5rem;
+                    transform: translate(-50%, -47%);
+                    width: 29.7rem;
+                }
+            }
+        }
+    }
+
+    &.-mitsubishi {
+        #{$this}__image {
+            &::before {
+                background: url('../images/logo-mitsubishi.png') no-repeat;
+                background-size: 100%;
+                height: 46rem;
+                transform: translate(-40%, -39%);
+                width: 53.4rem;
+
+                @include breakpoint(767) {
+                    height: 31rem;
+                    transform: translate(-50%, -42%);
+                    width: 30.4rem;
+                }
+            }
+        }
+    }
+
+    &.-infiniti {
+        #{$this}__image {
+            &::before {
+                background: url('../images/logo-infiniti.png') no-repeat;
+                background-size: 100%;
+                height: 33rem;
+                transform: translate(-47%, -39%);
+                width: 65rem;
+
+                @include breakpoint(767) {
+                    height: 18rem;
+                    transform: translate(-50%, -39%);
+                    width: 31rem;
+                }
+            }
+        }
+    }
+
+    &.-renault {
+        #{$this}__image {
+            &::before {
+                background: url('../images/logo-renault.png') no-repeat;
+                background-size: 100%;
+                height: 50rem;
+                transform: translate(-35%, -36%);
+                width: 39.6rem;
+
+                @include breakpoint(767) {
+                    height: 36rem;
+                    transform: translate(-50%, -36%);
+                    width: 26.6rem;
+                }
+            }
+
+            img {
+                margin: 0 auto;
+            }
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        padding: 6.3rem 0 8rem;
+
+        @include breakpoint(767) {
+            align-items: center;
+            flex-direction: column;
+            padding: 3.3rem 0 4rem;
+        }
+    }
+
+    &__image {
+        width: 25%;
+        position: relative;
+
+        &::before {
+            content: '';
+            left: 0;
+            opacity: 0.04;
+            position: absolute;
+            top: 0;
+
+            @include breakpoint(767) {
+                left: 50%;
+            }
+        }
+
+        img {
+            display: block;
+            margin-left: auto;
+
+            @include breakpoint(992) {
+                width: 100%;
+            }
+        }
+    }
+
+    &__content {
+        max-width: 75%;
+        padding: 1rem 5rem 0 12.5rem;
+
+        @include breakpoint(767) {
+            max-width: 100%;
+            padding: 2.5rem 1rem 0;
+            text-align: center;
+        }
+    }
+
+    &__title {
+        font-size: 4.2rem;
+        font-weight: 300;
+        margin: 0;
+        padding: 0 0 2.5rem;
+        position: relative;
+
+        @include breakpoint(767) {
+            font-size: 2.2rem;
+            padding: 0 0 2rem;
+        }
+
+        &::before {
+            background-color: #cb2630;
+            bottom: 0;
+            content: '';
+            height: 0.4rem;
+            left: 0;
+            position: absolute;
+            width: 7.4rem;
+
+            @include breakpoint(767) {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+
+    &__teaser {
+        margin-top: 5rem;
+
+        @include breakpoint(767) {
+            margin-top: 1.7rem;
+        }
+
+        p {
+            font-weight: 500;
+            line-height: 2;
+            margin: 0;
+            opacity: 0.82;
+
+            + p {
+                margin-top: 2.8rem;
+            }
+        }
+    }
+}

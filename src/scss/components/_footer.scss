@@ -1,24 +1,72 @@
 .footer {
-    &__top,
-    &__bottom {
-        align-items: flex-end;
+    background-color: $color-white;
+
+    &__wrapper {
         display: flex;
         justify-content: space-between;
+        padding: 3.5rem 0;
+
+        @include breakpoint(767) {
+            align-items: center;
+            flex-direction: column;
+            padding: 2.5rem 0 5.5rem;
+        }
     }
 
-    &__top {
-        font-family: $typo-2;
-        font-size: 1.3rem;
+    &__left {
+        display: flex;
+        flex-direction: column;
+        margin-right: 2rem;
+
+        @include breakpoint(767) {
+            margin-left: 0;
+        }
     }
 
-    &__bottom {
-        align-items: center;
-        margin-top: 3rem;
+    &__right {
+        margin-top: 1.4rem;
+
+        @include breakpoint(840) {
+            margin-top: 0.9rem;
+        }
+
+        @include breakpoint(767) {
+            margin-top: 3rem;
+        }
     }
 
     &__logo {
         img {
             max-width: 15rem;
+
+            @include breakpoint(840) {
+                max-width: 12rem;
+            }
+
+            @include breakpoint(767) {
+                max-width: 15rem;
+            }
+        }
+    }
+
+    &__menu-list {
+        margin: 0 -2rem;
+
+        @include breakpoint(1170) {
+            margin: 0 -1.5rem;
+        }
+
+        @include breakpoint(992) {
+            margin: 0 -0.7rem;
+        }
+
+        @include breakpoint(840) {
+            margin: 0 -0.5rem;
+        }
+
+        @include breakpoint(767) {
+            align-items: center;
+            flex-direction: column;
         }
     }
 
@@ -26,31 +74,50 @@
     &__brands-list {
         display: flex;
         list-style: none;
-        margin: 0;
         padding: 0;
     }
 
     &__menu-item {
+        padding: 0.5rem 2rem;
+
+        @include breakpoint(1170) {
+            padding: 0.5rem 1.5rem;
+        }
+
+        @include breakpoint(992) {
+            padding: 0.5rem 0.7rem;
+        }
+
+        @include breakpoint(840) {
+            font-size: 1.2rem;
+            padding: 0.5rem 0.5rem;
+        }
+
         a {
             @include trs();
             color: #242d3b;
             display: block;
-            padding: 0.5rem 2rem;
             text-decoration: none;
 
             @include on-event() {
                 color: #cb2630;
             }
         }
-    }
 
-    &__search-link {
-        color: #cb2630;
-        padding: 0 0 0.5rem;
-        text-decoration: none;
+        &:last-child {
+            margin-left: auto;
 
-        @include on-event() {
-            text-decoration: underline;
+            @include breakpoint(767) {
+                margin-left: 0;
+            }
+
+            a {
+                color: #cb2630;
+
+                @include on-event() {
+                    text-decoration: underline;
+                }
+            }
         }
     }
 
@@ -58,19 +125,54 @@
         color: #242d3b;
         font-family: $typo-2;
         font-size: 12px;
+        margin-top: 5rem;
         text-decoration: none;
 
         @include on-event() {
             color: #cb2630;
         }
+
+        @include breakpoint(767) {
+            bottom: 2rem;
+            left: 50%;
+            position: absolute;
+            transform: translateX(-50%);
+        }
+    }
+
+    &__brands {
+        margin-top: 3rem;
+
+        @include breakpoint(767) {
+            margin-top: 1.5rem;
+        }
     }
 
     &__brands-list {
+        justify-content: space-between;
         margin: 0 -1rem;
+
+        @include breakpoint(992) {
+            margin: 0 -0.5rem;
+        }
+
+        @include breakpoint(767) {
+            flex-wrap: wrap;
+            max-width: 40rem;
+        }
     }
     
     &__brands-item {
         margin: 0 1rem;
+
+        @include breakpoint(992) {
+            margin: 0 0.5rem;
+        }
+
+        @include breakpoint(767) {
+            margin: 0.5rem;
+            width: calc(50% - 1rem);
+        }
 
         a {
             @include trs();
@@ -78,16 +180,33 @@
             border: 3px solid #f7f8f9;
             color: #242d3b;
             display: flex;
-            font-size: 1.3rem;
             font-weight: 900;
+            justify-content: center;
             height: 100%;
-            padding: 1.3rem 6.5rem;
+            max-width: 21.6rem;
+            padding: 1.3rem 6rem;
             text-decoration: none;
             text-transform: uppercase;
 
             @include on-event() {
                 border-color: #cb2630;
                 color: #cb2630;
+            }
+
+            @include breakpoint(1170) {
+                padding: 1.3rem 4.8rem;
+            }
+
+            @include breakpoint(1050) {
+                padding: 1.3rem 3.5rem;
+            }
+
+            @include breakpoint(992) {
+                padding: 1.3rem 2.5rem;
+            }
+
+            @include breakpoint(840) {
+                padding: 1.3rem 1.7rem;
             }
 
             img {

@@ -4,18 +4,92 @@
     margin: 0 -1.5rem;
     $this: &;
 
+    @include breakpoint(767) {
+        margin: 0 -1rem;
+    }
+
+    @include breakpoint(480) {
+        margin: 0;
+    }
+
     &__item {
         flex-basis: calc(25% - 3rem);
         margin: 0 1.5rem 4rem;
         position: relative;
 
+        @include breakpoint(992) {
+            flex-basis: calc(50% - 3rem);
+        }
+
+        @include breakpoint(767) {
+            flex-basis: calc(50% - 2rem);
+            margin: 0 1rem 1.5rem;
+        }
+
+        @include breakpoint(480) {
+            flex-basis: 100%;
+            margin: 0 0 1.5rem;
+        }
+
         &.-focus {
             flex-basis: calc(50% - 3rem);
 
+            @include breakpoint(992) {
+                flex-basis: calc(100% - 3rem);
+            }
+
+            @include breakpoint(767) {
+                flex-basis: 100%;
+            }
+
+            #{$this}__image {
+                height: 100%;
+                position: relative;
+
+                &::before {
+                    background: linear-gradient(180deg, rgba(0,7,20,0.24) 25%, rgba(0,7,20,1) 100%);
+                    content: '';
+                    height: 100%;
+                    left: 0;
+                    position: absolute;
+                    top: 0;
+                    width: 100%;
+                }
+            }
+
             #{$this}__content {
+                background-color: transparent;
                 bottom: 0;
+                display: flex;
+                flex-wrap: wrap;
                 left: 0;
+                width: 63%;
                 position: absolute;
+
+                @include breakpoint(480) {
+                    width: 100%;
+                }
+            }
+
+            #{$this}__title {
+                color: $color-white;
+                font-size: 1.6rem;
+                margin: 0 0 5rem;
+                width: 100%;
+
+                @include breakpoint(480) {
+                    margin: 0 0 2rem;
+                }
+            }
+
+            #{$this}__date {
+                color: $color-white;
+                order: 3;
+            }
+
+            #{$this}__link {
+                margin: 0;
+                width: 37%;
             }
         }
     }
@@ -51,7 +125,7 @@
     }
 
     &__link {
-        color: #cb2630;
+        color: $color-1--1;
         display: block;
         font-weight: 500;
         margin: 2.3rem 0 0;

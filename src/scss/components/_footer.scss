@@ -97,12 +97,12 @@
 
         a {
             @include trs();
-            color: #242d3b;
+            color: $color-2--1;
             display: block;
             text-decoration: none;
 
             @include on-event() {
-                color: #cb2630;
+                color: $color-1--1;
             }
         }
 
@@ -114,7 +114,7 @@
             }
 
             a {
-                color: #cb2630;
+                color: $color-1--1;
 
                 @include on-event() {
                     text-decoration: underline;
@@ -124,14 +124,14 @@
     }
 
     &__created {
-        color: #242d3b;
+        color: $color-2--1;
         font-family: $typo-2;
         font-size: 12px;
         margin-top: 5rem;
         text-decoration: none;
 
         @include on-event() {
-            color: #cb2630;
+            color: $color-1--1;
         }
 
         @include breakpoint(767) {
@@ -180,7 +180,7 @@
             @include trs();
             align-items: center;
             border: 3px solid #f7f8f9;
-            color: #242d3b;
+            color: $color-2--1;
             display: flex;
             font-weight: 900;
             justify-content: center;
@@ -191,8 +191,8 @@
             text-transform: uppercase;
 
             @include on-event() {
-                border-color: #cb2630;
-                color: #cb2630;
+                border-color: $color-1--1;
+                color: $color-1--1;
             }
 
             @include breakpoint(1170) {

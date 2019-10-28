@@ -113,7 +113,7 @@
         }
 
         @include on-event() {
-            color: #cb2630;
+            color: $color-1--1;
         }
     }
 
@@ -156,7 +156,7 @@
         }
 
         @include on-event() {
-            color: #cb2630;
+            color: $color-1--1;
         }
     }
 }

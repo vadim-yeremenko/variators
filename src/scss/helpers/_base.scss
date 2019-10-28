@@ -1,8 +1,8 @@
 $color-white: #fff;
-$color-green: #39a38f;
 
 /*red */
 $color-1--1: #cb2630;
+$color-1--1: #c71721;
 
 /*black*/
 $color-2--1: #242d3b;
@@ -20,7 +20,7 @@ html {
 
 body {
     background-color: #f7f8f9;
-    color: #242d3b;
+    color: $color-2--1;
     font-family: $typo-1;
     font-size: 1.3rem;
     font-weight: 400;

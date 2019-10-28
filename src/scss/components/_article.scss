@@ -43,7 +43,7 @@
             }
 
             &::before {
-                color: #cb2630;
+                color: $color-1--1;
                 content: counter(step-counter);
                 font-weight: 700;
                 left: 0;

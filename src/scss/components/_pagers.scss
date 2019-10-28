@@ -1,0 +1,179 @@
+.pagers {
+    margin-top: 3rem;
+
+    &__listitems {
+        background-color: $color-white;
+        border-radius: 10px;
+        display: block;
+        list-style: none;
+        margin: 0;
+        padding: 0 2rem;
+        text-align: center;
+
+        @include breakpoint(992) {
+            padding: 0;
+        }
+    }
+
+    &__item {
+        display: inline-block;
+
+        &:nth-child(n+4):nth-last-child(n+4):not(.-current):not(.-ellipsis) {
+            @include breakpoint(767) {
+                display: none;
+            }
+        }
+
+        &:nth-child(n+3):nth-last-child(n+3):not(.-current):not(.-ellipsis) {
+            @include breakpoint(480) {
+                display: none;
+            }
+        }
+        
+        a,
+        span {
+            @include trs();
+            color: $color-2--1;
+            border-bottom: 0.5rem solid transparent;
+            display: block;
+            font-weight: 700;
+            line-height: 1;
+            min-height: 6.5rem;
+            padding: 2.6rem 2.8rem 2.1rem;
+            position: relative;
+            text-decoration: none;
+
+            @include breakpoint(1070) {
+                padding: 2.6rem 2.5rem 2.1rem;
+            }
+
+            @include breakpoint(992) {
+                padding: 2.6rem 2.3rem 2.1rem;
+            }
+
+            @include breakpoint(767) {
+                border: 0;
+                min-height: 4.5rem;
+                padding: 1.5rem;
+            }
+
+            @include breakpoint(480) {
+                min-height: 3.3rem;
+                padding: 1rem;
+            }
+        }
+
+        a:focus,
+        a:hover,
+        &.-current span {
+            border-bottom: 0.5rem solid $color-1--1;
+
+            @include breakpoint(767) {
+                border: 0;
+                color: $color-1--1;
+            }
+        }
+        
+        &.-prev {
+            float: left;
+            
+            a {
+                padding-left: 4rem;
+                text-transform: uppercase;
+
+                @include on-event() {
+                    color: $color-1--1;
+                    border-color: transparent;
+
+                    &::before {
+                        transform: translateY(-45%) translateX(-0.3rem);
+                    }
+                }
+
+                &::before {
+                    @include trs();
+                    content: url('../images/arrow-prev.svg');
+                    left: 0;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-45%);
+                }
+            }
+        }
+        
+        &.-next {
+            float: right;
+            
+            a {
+                padding-right: 4rem;
+                text-transform: uppercase;
+
+                @include on-event() {
+                    color: $color-1--1;
+                    border-color: transparent;
+
+                    &::before {
+                        transform: translateY(-43%) translateX(0.3rem);
+                    }
+                }
+
+                &::before {
+                    @include trs();
+                    content: url('../images/arrow-next.svg');
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    transform: translateY(-43%);
+                }
+            }
+        }
+
+        &.-prev,
+        &.-next {
+            @include breakpoint(992) {
+                a {
+                    font-size: 0;
+
+                    &::before,
+                    &::after {
+                        left: 50%;
+                        transform: translate(-50%, calc(50% - 0.5rem));
+                    }
+
+                    @include on-event() {
+                        &::before,
+                        &::after {
+                            transform: translate(-50%, calc(50% - 0.5rem));
+                        }
+                    }
+                }
+            }
+
+            @include breakpoint(767) {
+                a {
+                    &::before,
+                    &::after {
+                        transform: translate(-50%, -50%);
+                    }
+
+                    @include on-event() {
+                        &::before,
+                        &::after {
+                            transform: translate(-50%, -50%);
+                        }
+                    }
+                }
+            }
+        }
+        
+        &.-ellipsis {
+            &:nth-child(2) {
+                display: none;
+
+                @include breakpoint(767) {
+                    display: block;
+                }
+            }
+        }
+    }
+}

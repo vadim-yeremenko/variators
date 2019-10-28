@@ -1,6 +1,7 @@
 {% extends 'layouts/_layout.njk' %}
 {% from 'components/rubric.njk' import rubric with context %}
 {% from 'components/news-item.njk' import newsItem with context %}
+{% from 'components/pagers.njk' import pagers with context %}
 
 {% block content %}
     <section class="wrapper-inner">
@@ -15,6 +16,7 @@
                     </div>
                 </div>
             </section>
+            {{ pagers() }}
         </div>
     </section>
 {% endblock %}

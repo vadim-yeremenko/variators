@@ -1,3 +1,6 @@
+// import 'jquery';
+// import 'slick-carousel/slick/slick.min.js'
+
 document.addEventListener('DOMContentLoaded', () => {
 
 // Menu
@@ -9,4 +12,16 @@ document.addEventListener('DOMContentLoaded', () => {
             document.body.classList.toggle('menu-opened');
         });
     }
+//main slider	
+    $(".slider-banner").slick({
+	    speed: 1500,	   
+	    slidesToScroll: 1,
+	    slidesToShow: 1,
+	    infinite: true,
+	    centerMode: false,
+	    variableWidth: false,
+	    focusOnSelect: true,     
+	    dots: true,  
+	    arrows: false
+	})
 });

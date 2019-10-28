@@ -1,6 +1,7 @@
 {% set title = 'Главная' %}
 {% extends 'layouts/_layout.njk' %}
+{% from 'components/banner.njk' import banner with context %}
 
 {% block content %}
-
+	{{ banner() }}
 {% endblock %}

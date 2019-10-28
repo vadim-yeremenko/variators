@@ -974,87 +974,6 @@ button:focus {
     line-height: 2;
     margin: 2.2rem 0 0; }
 
-.news-block {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-  margin: 0 -1.5rem; }
-  .news-block__item {
-    -webkit-flex-basis: -webkit-calc(25% - 3rem);
-        -ms-flex-preferred-size: calc(25% - 3rem);
-            flex-basis: calc(25% - 3rem);
-    margin: 0 1.5rem 4rem;
-    position: relative; }
-    .news-block__item.-focus {
-      -webkit-flex-basis: -webkit-calc(50% - 3rem);
-          -ms-flex-preferred-size: calc(50% - 3rem);
-              flex-basis: calc(50% - 3rem); }
-      .news-block__item.-focus .news-block__content {
-        bottom: 0;
-        left: 0;
-        position: absolute; }
-  .news-block__image {
-    display: block; }
-    .news-block__image img {
-      display: block;
-      height: 100%;
-      -o-object-fit: cover;
-         object-fit: cover;
-      width: 100%; }
-  .news-block__content {
-    background-color: #fff;
-    padding: 1.8rem 3rem 3rem 2rem; }
-  .news-block__date {
-    color: #9399a4;
-    font-size: 1.2rem;
-    font-weight: 500;
-    margin: 0; }
-  .news-block__title {
-    font-size: 1.5rem;
-    font-weight: 700;
-    line-height: 1.6;
-    margin: 1.7rem 0 0; }
-  .news-block__link {
-    color: #cb2630;
-    display: block;
-    font-weight: 500;
-    margin: 2.3rem 0 0;
-    text-decoration: none; }
-    .news-block__link:hover, .news-block__link:focus {
-      text-decoration: underline; }
-
-.delivery__item {
-  background-color: #fff;
-  counter-increment: step-counter;
-  margin: 0 1.5rem;
-  padding: 4rem 5rem 5rem 4rem;
-  position: relative; }
-  .delivery__item::before {
-    content: "0" counter(step-counter);
-    font-size: 4.2rem;
-    font-weight: 300;
-    opacity: 0.13;
-    position: absolute;
-    right: 3rem;
-    top: 3rem; }
-
-.delivery__image {
-  max-height: 6rem; }
-
-.delivery__title {
-  color: #cb2630;
-  font-size: 2rem;
-  font-weight: 700;
-  margin: 4rem 0 0; }
-
-.delivery__teaser {
-  font-weight: 500;
-  line-height: 2; }
-
 /* Slider */
 .slick-slider {
   position: relative;
@@ -1143,7 +1062,7 @@ button:focus {
   display: none; }
 
 .banner {
-  height: 53rem;
+  max-height: 53rem;
   overflow: hidden;
   position: relative; }
   .banner__content {
@@ -1151,26 +1070,87 @@ button:focus {
     position: absolute;
     top: 0;
     left: 0;
-    padding: 9.4rem 10rem 0 0;
     width: 50%;
     height: 100%; }
+    .banner__content .container {
+      width: 75%;
+      position: absolute;
+      top: 9.4rem;
+      left: -21%;
+      -webkit-transform: translateX(50%);
+          -ms-transform: translateX(50%);
+              transform: translateX(50%); }
+  .banner__img {
+    max-height: 53rem;
+    overflow: hidden; }
+    .banner__img img {
+      width: 100%; }
   .banner__title {
     color: #fff;
     font-size: 5.8rem;
-    font-weight: 300; }
+    font-weight: 300;
+    margin: 0 0 7.5rem; }
     .banner__title.-red {
       color: #cb2630;
       font-weight: 700; }
+  .banner__form-wrap {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+  .banner__input {
+    width: 51rem;
+    height: 5.8rem; }
+    .banner__input::before {
+      content: url("../images/search.svg");
+      position: absolute;
+      top: 2.3rem;
+      left: 2.3rem; }
+    .banner__input input {
+      width: 100%;
+      height: 100%;
+      background: #fff;
+      color: #242d3b;
+      font-size: 1.4rem;
+      font-weight: 400;
+      padding: 0 2rem 0 5.3rem; }
+      .banner__input input::-webkit-input-placeholder {
+        color: #242d3b;
+        font-size: 1.4rem;
+        font-weight: 400; }
+      .banner__input input::-moz-placeholder {
+        color: #242d3b;
+        font-size: 1.4rem;
+        font-weight: 400; }
+      .banner__input input::-ms-input-placeholder {
+        color: #242d3b;
+        font-size: 1.4rem;
+        font-weight: 400; }
+      .banner__input input::placeholder {
+        color: #242d3b;
+        font-size: 1.4rem;
+        font-weight: 400; }
+  .banner__submit button {
+    width: 17.5rem;
+    height: 5.8rem;
+    background: #cb2630;
+    border: 0;
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 700; }
   .banner .slick-dots {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     position: absolute;
-    left: 5%;
+    left: 9%;
     bottom: 8.2rem;
     list-style: none;
-    z-index: 1; }
+    z-index: 1;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%); }
     .banner .slick-dots li.slick-active button {
       background-color: transparent;
       border: 3px solid #cb2630;
@@ -1191,3 +1171,56 @@ button:focus {
       .banner .slick-dots button:hover, .banner .slick-dots button:focus {
         background: #cb2630;
         opacity: 1; }
+
+.news-block {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  margin: 0 -1.5rem; }
+  .news-block__item {
+    -webkit-flex-basis: -webkit-calc(25% - 3rem);
+        -ms-flex-preferred-size: calc(25% - 3rem);
+            flex-basis: calc(25% - 3rem);
+    margin: 0 1.5rem 4rem;
+    position: relative; }
+    .news-block__item.-focus {
+      -webkit-flex-basis: -webkit-calc(50% - 3rem);
+          -ms-flex-preferred-size: calc(50% - 3rem);
+              flex-basis: calc(50% - 3rem); }
+      .news-block__item.-focus .news-block__content {
+        bottom: 0;
+        left: 0;
+        position: absolute; }
+  .news-block__image {
+    display: block; }
+    .news-block__image img {
+      display: block;
+      height: 100%;
+      -o-object-fit: cover;
+         object-fit: cover;
+      width: 100%; }
+  .news-block__content {
+    background-color: #fff;
+    padding: 1.8rem 3rem 3rem 2rem; }
+  .news-block__date {
+    color: #9399a4;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 0; }
+  .news-block__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.6;
+    margin: 1.7rem 0 0; }
+  .news-block__link {
+    color: #cb2630;
+    display: block;
+    font-weight: 500;
+    margin: 2.3rem 0 0;
+    text-decoration: none; }
+    .news-block__link:hover, .news-block__link:focus {
+      text-decoration: underline; }

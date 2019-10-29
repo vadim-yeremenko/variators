@@ -1,0 +1,78 @@
+.news-content,
+.sidebar {
+    display: table-cell;
+    vertical-align: top;
+    width: 100%;
+
+    @include breakpoint(850) {
+        display: block;
+        padding: 0 1rem;
+    }
+
+    + .sidebar {
+        padding: 0 0 0 3rem;
+
+        @include breakpoint(850) {
+            padding: 4rem 0 0;
+        }
+    }
+}
+
+.sidebar {
+    width: 30rem;
+
+    @include breakpoint(850) {
+        width: 100%;
+    }
+
+    &__title {
+        font-size: 2rem;
+        margin: 0 0 2.5rem;
+        
+        @include breakpoint(850) {
+            text-align: center;
+        }
+    }
+}
+
+.news-content {
+    background-color: $color-white;
+    padding: 3.3rem 4rem 6rem 3.8rem;
+    position: relative;
+
+    @include breakpoint(480) {
+        padding: 3rem 2rem 4rem 2rem;
+    }
+
+    &::before {
+        background-color: $color-1--1;
+        content: '';
+        height: 0.3rem;
+        left: 0;
+        position: absolute;
+        top: 5.5rem;
+        transform: translateX(-70%);
+        width: 5.3rem;
+
+        @include breakpoint(480) {
+            content: none;
+        }
+    }
+
+    &::after {
+        background-image: url('../images/decor-news.svg');
+        background-repeat: no-repeat;
+        content: '';
+        height: 6.1rem;
+        left: 0;
+        position: absolute;
+        top: 22.2rem;
+        transform: translateX(-4.8rem) scale(-1, 1);
+        width: 7.1rem;
+        z-index: -1;
+
+        @include breakpoint(480) {
+            content: none;
+        }
+    }
+}

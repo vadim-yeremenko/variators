@@ -2,10 +2,13 @@ $color-white: #fff;
 
 /*red */
 $color-1--1: #cb2630;
-$color-1--1: #c71721;
+$color-1--2: #c71721;
+$color-1--3: #d80b0f;
 
 /*black*/
 $color-2--1: #242d3b;
+$color-2--2: #9399a4;
+$color-2--3: #f3f4f4;
 
 html {
     font-size: 62.5%;
@@ -121,4 +124,14 @@ button:focus {
         padding-bottom: 7.5rem;
         padding-top: 4.5rem;
     }
+
+    &.-page-detail {
+        padding-bottom: 7.5rem;
+    }
+}
+
+.site-inner {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
 }

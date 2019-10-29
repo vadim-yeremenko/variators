@@ -20,6 +20,9 @@
                     {% include 'partials/_header.njk' %}
                 {% endblock %}
             </header>
+            {% if breadcrumbs %}
+                {% include 'components/breadcrumbs.njk' %}
+            {% endif %}
             <main class="site-main" role="main">
             {% block content %}{% endblock %}
             </main>

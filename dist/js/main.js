@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	    variableWidth: false,
 	    focusOnSelect: true,     
 	    dots: true,  
-	    arrows: false
+	    arrows: false,
+        appendDots: '.banner__content .container'
 	})
 });

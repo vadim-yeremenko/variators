@@ -14,6 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 //main slider	
     $(".slider-banner").slick({
+    	// autoplay: true,
+  		autoplaySpeed: 4000,
 	    speed: 1500,	   
 	    slidesToScroll: 1,
 	    slidesToShow: 1,
@@ -23,6 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	    focusOnSelect: true,     
 	    dots: true,  
 	    arrows: false,
-        appendDots: '.banner__content .container'
+        appendDots: '.banner__wrapper'
 	})
 });

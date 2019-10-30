@@ -126,6 +126,7 @@ button:focus {
       -ms-flex-pack: justify;
           justify-content: space-between;
   left: 0;
+  max-height: 10rem;
   overflow: hidden;
   position: fixed;
   top: 0;
@@ -1243,7 +1244,7 @@ button:focus {
     font-size: 1.4rem;
     font-weight: 700; }
     .banner__submit button:hover, .banner__submit button:focus {
-      background: #b0141d; }
+      background: #b6222b; }
     @media screen and (max-width: 767px) {
       .banner__submit button {
         display: -webkit-box;
@@ -1689,3 +1690,8 @@ button:focus {
     @media screen and (max-width: 480px) {
       .news-content::after {
         content: none; } }
+
+iframe {
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(1);
+  /* Google Chrome & Safari 6+ */ }

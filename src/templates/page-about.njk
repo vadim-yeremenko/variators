@@ -1,0 +1,40 @@
+{% extends 'layouts/_layout.njk' %}
+{% from 'components/article.njk' import article with context %}
+{% from 'components/rubric.njk' import rubric with context %}
+
+{% block content %}
+    <section class="wrapper-inner">
+        <div class="page-image">
+            <picture class="page-image__picture">
+                <img src="//picsum.photos/1920/326?image={{ range(40, 100) | random }}" alt="Описание картинки">
+            </picture>
+        </div>
+        <div class="container -page">
+            <div class="about-block">
+                <div class="about-block__advantages advantages">
+                    <ul class="advantages__list">
+                        {% for i in range(4) %}
+                            <li class="advantages__item">
+                                <p class="advantages__title">Преимущества</p>
+                                <p class="advantages__teaser">Кстати, базовые сценарии поведения пользователей, которые представляют собой яркий пример континентально-европейского</p>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="about-block__article">
+                    {{ rubric(title = 'О компании', teaser = false) }}
+                    <div class="article">
+                        <p class="article__text">Каждый веб-разработчик знает, что такое текст-«рыба». Текст этот, несмотря на название, не имеет никакого отношения к обитателям водоемов. Используется он веб-дизайнерами для вставки на интернет-страницы и демонстрации внешнего вида контента, просмотра шрифтов, абзацев, отступов и т.д. Так как цель применения такого текста исключительно демонстрационная, то и смысловую нагрузку ему нести совсем необязательно. Более того, нечитабельность текста сыграет на руку при оценке качества восприятия макета.</p>
+                        <picture class="article__image">
+                            <img src="//picsum.photos/770/214?image={{ range(40, 100) | random }}" alt="Описание картинки">
+                        </picture>
+                        <p class="article__text">Каждый веб-разработчик знает, что такое текст-«рыба». Текст этот, несмотря на название, не имеет никакого отношения к обитателям водоемов. Используется он веб-дизайнерами для вставки на интернет-страницы и демонстрации внешнего вида контента, просмотра шрифтов, абзацев, отступов и т.д. Так как цель применения такого текста исключительно демонстрационная, то и смысловую нагрузку ему нести совсем необязательно. Более того, нечитабельность текста сыграет на руку при оценке качества восприятия макета.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="map">
+
+        </div>
+    </section>
+{% endblock %}

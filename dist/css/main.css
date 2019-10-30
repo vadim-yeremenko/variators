@@ -52,13 +52,16 @@ button:focus {
   left: 0;
   min-height: 100vh;
   position: relative;
-  -webkit-transition: left 0.5s;
-  -o-transition: left 0.5s;
-  transition: left 0.5s;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
   width: 100%;
   z-index: 99; }
   .menu-opened .site-wrapper {
-    left: 53rem; }
+    left: 53rem;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s; }
     @media screen and (max-width: 767px) {
       .menu-opened .site-wrapper {
         left: 0; } }
@@ -120,7 +123,6 @@ button:focus {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  left: 0;
   max-height: 10rem;
   overflow: hidden;
   position: fixed;
@@ -323,15 +325,15 @@ button:focus {
 .menu {
   background-color: #be252e;
   height: 100vh;
-  left: 0;
   overflow: hidden;
   position: fixed;
   top: 0;
-  -webkit-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
-  -webkit-transform: translate3d(-100%, 0, 0);
-          transform: translate3d(-100%, 0, 0);
+  -webkit-transition: all 0.5s ease-in-out 0ms;
+  -o-transition: all 0.5s ease-in-out 0ms;
+  transition: all 0.5s ease-in-out 0ms;
+  -webkit-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+          transform: translateX(-100%);
   visibility: hidden;
   width: 53rem;
   z-index: 100; }
@@ -342,18 +344,15 @@ button:focus {
       top: 6rem;
       width: 100%; } }
   .menu-opened .menu {
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
-    -webkit-transition: -webkit-transform 0.5s;
-    transition: -webkit-transform 0.5s;
-    -o-transition: transform 0.5s;
-    transition: transform 0.5s;
-    transition: transform 0.5s, -webkit-transform 0.5s;
+    -webkit-transition: all 0.5s ease-in-out 0ms;
+    -o-transition: all 0.5s ease-in-out 0ms;
+    transition: all 0.5s ease-in-out 0ms;
     visibility: visible; }
     @media screen and (max-width: 767px) {
       .menu-opened .menu {
-        -webkit-transform: translate3d(0, 0, 0);
-                transform: translate3d(0, 0, 0); } }
+        -webkit-transform: translateX(0);
+            -ms-transform: translateX(0);
+                transform: translateX(0); } }
   .menu__phone {
     background-color: #ae222a;
     padding: 3.7rem 20rem 3.6rem 9rem; }
@@ -1691,6 +1690,13 @@ button:focus {
       .news-content::after {
         content: none; } }
 
+.map {
+  max-width: 100%; }
+  .map img {
+    display: block;
+    height: auto;
+    width: 100%; }
+
 .about-block {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1715,8 +1721,10 @@ button:focus {
     background-color: #fff;
     margin-top: -10rem;
     padding: 4rem 4rem 5rem 3.8rem;
+    position: relative;
     width: -webkit-calc(100% - 40rem);
-    width: calc(100% - 40rem); }
+    width: calc(100% - 40rem);
+    z-index: 1; }
     @media screen and (max-width: 992px) {
       .about-block__article {
         width: -webkit-calc(100% - 30rem);
@@ -1790,8 +1798,3 @@ button:focus {
     @media screen and (max-width: 767px) {
       .page-image__picture img {
         min-height: 20rem; } }
-
-iframe {
-  filter: grayscale(100%);
-  -webkit-filter: grayscale(1);
-  /* Google Chrome & Safari 6+ */ }

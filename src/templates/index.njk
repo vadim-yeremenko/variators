@@ -1,9 +1,10 @@
 {% set title = 'Главная' %}
 {% extends 'layouts/_layout.njk' %}
 {% from 'components/banner.njk' import banner with context %}
-{% from 'components/map.njk' import map with context %}
 
 {% block content %}
 	{{ banner() }}
-	{{ map() }}
+	<div class="map">
+        <img src="../images/map.png" alt="Карта">
+    </div>
 {% endblock %}

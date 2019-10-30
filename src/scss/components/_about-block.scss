@@ -22,7 +22,9 @@
         background-color: $color-white;
         margin-top: -10rem;
         padding: 4rem 4rem 5rem 3.8rem;
+        position: relative;
         width: calc(100% - 40rem);
+        z-index: 1;
 
         @include breakpoint(992) {
             width: calc(100% - 30rem);

@@ -27,4 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	    arrows: false,
         appendDots: '.banner__wrapper'
 	})
+
+
+	$('[class^="ymaps"]').find('canvas').css('filter', 'grayscale(100%)');
+
 });

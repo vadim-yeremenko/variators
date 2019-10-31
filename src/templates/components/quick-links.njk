@@ -1,0 +1,26 @@
+{% macro quickLinks() %}
+    <section class="quick-links">
+        <nav class="quick-links__wrap">
+            <ul class="quick-links__list">
+                {% set menuItems = [
+                    ['NISSAN', '#', 'icon-nissan'],
+                    ['mitsubishi', '#', 'icon-mitsubishi'],
+                    ['Infiniti', '#', 'icon-infiniti'],
+                    ['Renault', '#', 'icon-renault']
+                ] %}
+                {% for item, link, icon in menuItems %}
+                    <li class="quick-links__item">
+                        <a href="{{ link }}" class="quick-links__link">
+                            <picture class="quick-links__picture">
+                                <img src="//picsum.photos/480/318?image={{ range(40, 100) | random }}" alt="{{ item }}">
+                            </picture>
+                            <h2 class="quick-links__caption">
+                                <img src="images/{{ icon }}-md.png" alt="{{ item }}">{{ item }}
+                            </h2>
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </section>
+{% endmacro %}

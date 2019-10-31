@@ -1798,3 +1798,52 @@ button:focus {
     @media screen and (max-width: 767px) {
       .page-image__picture img {
         min-height: 20rem; } }
+
+.quick-links__list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.quick-links__item {
+  position: relative;
+  width: 25%; }
+
+.quick-links__link {
+  display: block;
+  text-decoration: none; }
+
+.quick-links__picture {
+  display: block; }
+  .quick-links__picture img {
+    display: block;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 100%; }
+
+.quick-links__caption {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 900;
+  left: 50%;
+  margin: 0;
+  position: absolute;
+  text-transform: uppercase;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); }
+  .quick-links__caption img {
+    margin-right: 2rem; }

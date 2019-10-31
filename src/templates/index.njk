@@ -1,9 +1,11 @@
 {% set title = 'Главная' %}
 {% extends 'layouts/_layout.njk' %}
 {% from 'components/banner.njk' import banner with context %}
+{% from 'components/quick-links.njk' import quickLinks with context %}
 
 {% block content %}
 	{{ banner() }}
+    {{ quickLinks() }}
 	<div class="map">
         <img src="../images/map.png" alt="Карта">
     </div>

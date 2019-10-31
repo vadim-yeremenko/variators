@@ -1,14 +1,14 @@
 // import 'jquery';
 // import 'slick-carousel/slick/slick.min.js'
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
 
 // Menu
     const menuBtn = document.querySelector('.menu-toggle');
     const menu = document.querySelector('.menu');
 
     if (menuBtn && menu) {
-        menuBtn.addEventListener('click', () => {
+        menuBtn.addEventListener('click', function() {
             document.body.classList.toggle('menu-opened');
         });
     }
@@ -43,4 +43,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	    arrows: false,
         // appendDots: '.banner__wrapper'
 	})
+
+
+	$('[class^="ymaps"]').find('canvas').css('filter', 'grayscale(100%)');
+
 });

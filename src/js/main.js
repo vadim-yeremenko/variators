@@ -28,6 +28,22 @@ document.addEventListener('DOMContentLoaded', function() {
         appendDots: '.banner__wrapper'
 	})
 
+//service slider	
+    $(".slider-service").slick({
+    	// autoplay: true,
+  		autoplaySpeed: 4000,
+	    speed: 1500,	   
+	    slidesToScroll: 1,
+	    slidesToShow: 1,
+	    infinite: true,
+	    centerMode: false,
+	    variableWidth: false,
+	    focusOnSelect: true,     
+	    dots: true,  
+	    arrows: false,
+        // appendDots: '.banner__wrapper'
+	})
+
 
 	$('[class^="ymaps"]').find('canvas').css('filter', 'grayscale(100%)');
 

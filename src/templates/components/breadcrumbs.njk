@@ -1,0 +1,10 @@
+{% set listBreadcrumbs = ['Главная', 'Новости', 'Страница новости'] %}
+<nav class="breadcrumbs">
+    <div class="container">
+        <ol>
+            {% for item in listBreadcrumbs %}
+                <li><{{ 'span aria-current="page"' if loop.last else 'a href="#"' }}>{{ item }}</{{ 'span' if loop.last else 'a' }}></li>
+            {% endfor %}
+        </ol>
+    </div>
+</nav>

@@ -1,0 +1,26 @@
+{% set breadcrumbs = true %}
+{% extends 'layouts/_layout.njk' %}
+{% from 'components/article.njk' import article with context %}
+{% from 'components/news-item.njk' import newsItem with context %}
+
+{% block content %}
+    <section class="wrapper-inner">
+        <div class="container -page-detail">
+            <div class="site-inner">
+                <div class="news-content">
+                    {{ article(articleHeading = true, video = true) }}
+                </div>
+                <aside class="sidebar">
+                    <section class="sidebar__widget">
+                        <h2 class="sidebar__title">Другие новости</h2>
+                        <div class="news-block">
+                            {% for item in range(2) %}
+                                {{ newsItem() }}
+                            {% endfor %}
+                        </div>
+                    </section>
+                </aside>
+            </div>
+        </div>
+    </section>
+{% endblock %}

@@ -2,7 +2,9 @@
     background-color: $color-white;
     display: flex;
     justify-content: space-between;
-    left: 0;
+    //left: 0; // check in IE without left: 0
+    //left: 0;
+    max-height: 10rem;
     overflow: hidden;
     position: fixed;
     top: 0;

@@ -1,20 +1,7 @@
 // Main settings for project 
 @import "helpers/mixins"; 
 @import "helpers/fonts"; 
-@import "helpers/base"; 
- 
-// Partials 
-@import "components/header"; 
-@import "components/menu"; 
-@import "components/footer"; 
-@import "components/brand-text"; 
-@import "components/rubric"; 
-@import "components/article"; 
-@import "components/delivery"; 
-@import "components/slider-default"; 
-@import "components/banner"; 
-@import "components/news"; 
-@import "components/pagers"; 
+@import "helpers/base";
 
 // Partials
 @import "components/header";
@@ -34,3 +21,4 @@
 @import "components/about-block";
 @import "components/page-image";
 @import "components/quick-links";
+@import "components/service";

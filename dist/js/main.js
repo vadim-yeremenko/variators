@@ -26,9 +26,8 @@ document.addEventListener('DOMContentLoaded', function() {
 	    dots: true,  
 	    arrows: false,
         appendDots: '.banner__wrapper'
-	})
+	});
 
-<<<<<<< HEAD
 //service slider	
     $(".slider-service").slick({
     	// autoplay: true,
@@ -44,9 +43,4 @@ document.addEventListener('DOMContentLoaded', function() {
 	    arrows: false,
         // appendDots: '.banner__wrapper'
 	})
-=======
-
-	$('[class^="ymaps"]').find('canvas').css('filter', 'grayscale(100%)');
-
->>>>>>> master
 });

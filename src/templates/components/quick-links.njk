@@ -11,12 +11,14 @@
                 {% for item, link, icon in menuItems %}
                     <li class="quick-links__item">
                         <a href="{{ link }}" class="quick-links__link">
-                            <picture class="quick-links__picture">
-                                <img src="//picsum.photos/480/318?image={{ range(40, 100) | random }}" alt="{{ item }}">
-                            </picture>
-                            <h2 class="quick-links__caption">
-                                <img src="images/{{ icon }}-md.png" alt="{{ item }}">{{ item }}
-                            </h2>
+                            <div class="quick-links__link-wrap">
+                                <picture class="quick-links__picture">
+                                    <img src="//picsum.photos/480/318?image={{ range(40, 100) | random }}" alt="{{ item }}">
+                                </picture>
+                                <h2 class="quick-links__caption">
+                                    <img src="images/{{ icon }}-md.png" alt="{{ item }}">{{ item }}
+                                </h2>
+                            </div>
                         </a>
                     </li>
                 {% endfor %}

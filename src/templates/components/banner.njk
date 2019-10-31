@@ -1,14 +1,12 @@
 {% macro banner() %}
 	<section class="banner">
 		<div class="slider slider-banner">
-			<div class="banner__img">
-				<img src="https://9to5google.com/wp-content/uploads/sites/4/2019/07/android_auto_14.jpg?quality=82&strip=all&w=1600">
-			</div>
-			<div class="banner__img">
-				<img src="https://9to5google.com/wp-content/uploads/sites/4/2019/07/android_auto_14.jpg?quality=82&strip=all&w=1600">
-			</div>
+			{% for item in range(5) %}
+				<div class="banner__img">
+					<img src="//picsum.photos/1920/529?image={{ range(40, 100) | random }}" alt="Описание картинки">
+				</div>
+			{% endfor %}
 		</div>
-
 		<div class="banner__content">
 			<div class="container">
 				<div class="banner__wrapper">
@@ -17,7 +15,7 @@
 						вариаторы для вашего авто
 					</h1>
 					<div class="banner__form">
-						<form name="form", action="", method="POST">
+						<form name="form" action="" method="POST">
 							<div class="banner__form-wrap">
 								<div class="banner__input">
 									<input type="search" name="search" placeholder="Поиск по номеру">

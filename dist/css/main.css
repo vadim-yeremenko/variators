@@ -1033,6 +1033,7 @@ button:focus {
 /* Slider */
 .slick-slider {
   position: relative;
+  height: 100%;
   display: block;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1050,6 +1051,7 @@ button:focus {
   position: relative;
   display: block;
   overflow: hidden;
+  height: 100%;
   margin: 0;
   padding: 0; }
 
@@ -1070,6 +1072,7 @@ button:focus {
   position: relative;
   top: 0;
   left: 0;
+  height: 100%;
   display: block;
   margin-left: auto;
   margin-right: auto; }
@@ -1159,9 +1162,12 @@ button:focus {
       opacity: 1; }
 
 .banner {
-  max-height: 53rem;
+  height: 53rem;
   overflow: hidden;
   position: relative; }
+  @media screen and (max-width: 992px) {
+    .banner {
+      height: 40rem; } }
   .banner__content {
     background: rgba(21, 39, 53, 0.8);
     position: absolute;
@@ -1208,11 +1214,14 @@ button:focus {
         text-align: center;
         width: 95%; } }
   .banner__img {
-    max-height: 53rem;
+    height: 53rem;
     overflow: hidden; }
+    @media screen and (max-width: 992px) {
+      .banner__img {
+        height: 40rem; } }
     .banner__img img {
       height: auto;
-      min-height: 53rem;
+      min-height: 100%;
       -o-object-fit: cover;
          object-fit: cover;
       width: 100%; }
@@ -1224,6 +1233,9 @@ button:focus {
     @media screen and (max-width: 992px) {
       .banner__title {
         font-size: 4rem; } }
+    @media screen and (max-width: 767px) {
+      .banner__title {
+        font-size: 3rem; } }
     .banner__title.-red {
       color: #cb2630;
       font-weight: 700; }
@@ -2016,7 +2028,8 @@ button:focus {
   .service__title {
     color: #242d3b;
     font-size: 4.5rem;
-    font-weight: 300; }
+    font-weight: 300;
+    margin: 0 0 3rem; }
     .service__title span {
       color: #cb2630;
       font-weight: 700; }

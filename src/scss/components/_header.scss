@@ -3,7 +3,6 @@
     display: flex;
     justify-content: space-between;
     //left: 0; // check in IE without left: 0
-    //left: 0;
     max-height: 10rem;
     overflow: hidden;
     position: fixed;
@@ -128,11 +127,11 @@
             padding: 4.2rem 6rem 4.1rem 6rem;
         }
 
-        @include breakpoint(992) {
+        @include breakpoint(1010) {
             padding: 4.2rem 2.5rem 4.1rem 2.5rem;
         }
         
-        @include breakpoint(900) {
+        @include breakpoint(925) {
             display: none;
         }
     }

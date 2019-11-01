@@ -1,0 +1,44 @@
+<div class="popup" id="registration" style="display: none;">
+    <form action="#" method="get" class="popup__form">
+        <fieldset>
+            <legend>Регистрация <a data-fancybox data-src="#enter" href="javascript:;">Вход</a></legend>
+            <input type="text" name="login" id="login" value="" placeholder="Логин">
+            <input type="email" name="email" id="email" value="" placeholder="E-mail">
+            <input type="tel" name="phone" id="phone" value="" placeholder="Телефон">
+            <input type="password" name="password" id="password" value="" placeholder="Пароль">
+            <input type="password" name="repeat-password" id="repeat-password" value="" placeholder="Пароль еще раз">
+            <div class="popup__checkbox">
+                <input type="checkbox" id="agreement" name="agreement" checked>
+                <label for="agreement">Согласен с <a href="#">правилами сайта</a></label>
+            </div>
+            <button type="submit" class="popup__button">Применить</button>
+        </fieldset>
+    </form>
+</div>
+
+<div class="popup" id="enter" style="display: none;">
+    <form action="#" method="get" class="popup__form">
+        <fieldset>
+            <legend>Вход<a data-fancybox data-src="#registration" href="javascript:;">Регистрация</a></legend>
+            <input type="text" name="login" id="login2" value="" placeholder="Логин">
+            <input type="password" name="password" id="password2" value="" placeholder="Пароль">
+            <a data-fancybox data-src="#recovery" href="javascript:;" class="popup__question">Забыли пароль?</a>
+            <button type="submit" class="popup__button">Войти</button>
+        </fieldset>
+    </form>
+</div>
+
+<div class="popup" id="recovery" style="display: none;">
+    <form action="#" method="get" class="popup__form">
+        <fieldset>
+            <legend>Восстановление пароля</legend>
+            <input type="email" name="email" id="email2" value="" placeholder="E-mail">
+            <button type="submit" class="popup__button">Применить</button>
+        </fieldset>
+    </form>
+</div>
+
+<div class="popup modal" id="order">
+    <h2 class="modal__title"><span>Спасибо</span> за оформление заказа</h2>
+    <p class="modal__teaser">В ближайше время с Вами свяжется наш менеджер</p>
+</div>

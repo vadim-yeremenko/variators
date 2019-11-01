@@ -2033,3 +2033,155 @@ button:focus {
     .service__title span {
       color: #cb2630;
       font-weight: 700; }
+
+.popup {
+  background-color: #fff;
+  margin: 0 auto;
+  padding: 0;
+  width: 37.2rem; }
+  @media screen and (max-width: 480px) {
+    .popup {
+      width: 32rem; } }
+  .popup__form {
+    padding: 3rem; }
+    @media screen and (max-width: 480px) {
+      .popup__form {
+        padding: 2rem; } }
+    .popup__form fieldset {
+      border: 0;
+      margin: 0;
+      padding: 0; }
+    .popup__form legend {
+      color: #cb2630;
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin: 0 0 3.5rem;
+      padding: 0;
+      width: 100%; }
+      #recovery .popup__form legend {
+        color: #242d3b; }
+      .popup__form legend a {
+        color: #242d3b;
+        float: right;
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin-left: auto;
+        text-decoration: none; }
+        .popup__form legend a:hover {
+          color: #cb2630; }
+    .popup__form input {
+      background-color: #f7f8f9;
+      border: 0;
+      color: #242d3b;
+      font-family: "Montserrat", "Franklin Gothic Medium", Tahoma, sans-serif;
+      font-size: 1.3rem;
+      padding: 2.1rem 2rem;
+      width: 100%; }
+      .popup__form input + input {
+        margin-top: 1rem; }
+    .popup__form input[type="checkbox"] {
+      background: transparent;
+      border: 0;
+      left: 0;
+      opacity: 0;
+      pointer-events: none;
+      position: absolute;
+      width: auto; }
+      .popup__form input[type="checkbox"] + label {
+        cursor: pointer;
+        font-weight: 500;
+        padding: 0.4rem 0.3rem 0.3rem 4rem;
+        position: relative; }
+        .popup__form input[type="checkbox"] + label::before {
+          background: #cb2630;
+          -webkit-box-shadow: inset 1px 2px 0 rgba(51, 66, 95, 0.15);
+                  box-shadow: inset 1px 2px 0 rgba(51, 66, 95, 0.15);
+          content: '';
+          height: 2.2rem;
+          left: 0;
+          position: absolute;
+          top: 0;
+          width: 2.2rem; }
+        .popup__form input[type="checkbox"] + label::after {
+          -webkit-transition: all 250ms ease-in-out 0ms;
+          -o-transition: all 250ms ease-in-out 0ms;
+          transition: all 250ms ease-in-out 0ms;
+          content: url("../images/checkbox.svg");
+          height: 1rem;
+          left: 0.5rem;
+          line-height: 1.1;
+          opacity: 0;
+          position: absolute;
+          top: 0.5rem;
+          -webkit-transform: scale(0.75);
+              -ms-transform: scale(0.75);
+                  transform: scale(0.75);
+          width: 1.2rem; }
+        .popup__form input[type="checkbox"] + label a {
+          color: #cb2630;
+          text-decoration: none; }
+          .popup__form input[type="checkbox"] + label a:hover, .popup__form input[type="checkbox"] + label a:focus {
+            text-decoration: underline; }
+      .popup__form input[type="checkbox"]:checked + label::after {
+        opacity: 1;
+        -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+                transform: scale(1); }
+  .popup__checkbox {
+    margin: 1.8rem 0; }
+  .popup__button {
+    -webkit-transition: all 250ms ease-in-out 0ms;
+    -o-transition: all 250ms ease-in-out 0ms;
+    transition: all 250ms ease-in-out 0ms;
+    background-color: #cb2630;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    font-family: "Montserrat", "Franklin Gothic Medium", Tahoma, sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    padding: 2.5rem 5.7rem;
+    text-transform: uppercase;
+    width: 100%; }
+    .popup__button:hover, .popup__button:focus {
+      background-color: #ae222a; }
+    #recovery .popup__button {
+      margin-top: 2rem; }
+  .popup__question {
+    color: #cb2630;
+    display: block;
+    font-weight: 500;
+    margin: 2.4rem 0;
+    text-align: center;
+    text-decoration: none; }
+    .popup__question:hover, .popup__question:focus {
+      text-decoration: underline; }
+
+.fancybox-bg {
+  background: rgba(0, 0, 0, 0.5); }
+
+.modal {
+  padding: 12.5rem 7.5rem 4.5rem;
+  position: relative;
+  text-align: center; }
+  .modal::before {
+    content: url("../images/modal-icon.svg");
+    left: 50%;
+    position: absolute;
+    top: 4rem;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%); }
+  .modal__title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 3rem;
+    margin: 0; }
+    .modal__title span {
+      display: block;
+      font-size: 2.2rem; }
+  .modal__teaser {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 2.4rem;
+    margin: 2.5rem 0 0; }

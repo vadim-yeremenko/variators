@@ -44,4 +44,10 @@ document.addEventListener('DOMContentLoaded', function() {
 	    arrows: false,
         // appendDots: '.banner__wrapper'
 	})
+
+// Fancybox
+    $('[data-fancybox]').fancybox({
+        smallBtn : false,
+		touch: false,
+    })
 });

@@ -1,7 +1,11 @@
 .banner {
-	max-height: 53rem;
+	height: 53rem;
 	overflow: hidden;
 	position: relative;
+
+	@include breakpoint(992) {
+		height: 40rem;
+	}
 
 	&__content {
 		background: rgba(21, 39, 53, 0.8);
@@ -51,12 +55,16 @@
 	}
 
 	&__img {
-		max-height: 53rem;
+		height: 53rem;
 		overflow: hidden;
+
+		@include breakpoint(992) {
+			height: 40rem;
+		}
 
 		img {
 			height: auto;
-			min-height: 53rem;
+			min-height: 100%;
 			object-fit: cover;
 			width: 100%;
 		}
@@ -70,6 +78,10 @@
 
 		@include breakpoint(992) {
 			font-size: 4rem;
+		}
+
+		@include breakpoint(767) {
+			font-size: 3rem;
 		}
 
 		&.-red {

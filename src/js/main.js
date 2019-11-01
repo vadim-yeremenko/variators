@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
     $(".slider-service").slick({
     	// autoplay: true,
   		autoplaySpeed: 4000,
+		fade: true,
 	    speed: 1500,	   
 	    slidesToScroll: 1,
 	    slidesToShow: 1,

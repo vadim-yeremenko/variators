@@ -126,6 +126,10 @@ button:focus {
         max-width: 100%;
     }
 
+    &.-xl {
+        max-width: 151rem;
+    }
+
     &.-page {
         padding-bottom: 7.5rem;
         padding-top: 4.5rem;

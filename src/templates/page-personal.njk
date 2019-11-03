@@ -1,0 +1,107 @@
+{% set headerLogin = true %}
+{% extends 'layouts/_layout.njk' %}
+{% from 'components/rubric.njk' import rubric with context %}
+
+{% block content %}
+    <section class="wrapper-inner">
+        <div class="container -page">
+            {{ rubric(title = 'Личный кабинет', teaser = false) }}
+            <div class="account">
+                <div class="account__wrapper tabs">
+                    <ul class="tabs__list">
+                        <li class="tabs__item"><a href="#profile" role="tab" data-tab="profile" class="tabs__trigger active">Личные данные</a></li>
+                        <li class="tabs__item"><a href="#history" role="tab" data-tab="history" class="tabs__trigger">История заказов</a></li>
+                    </ul>
+                    <div class="tabs__panel profile active" id="profile">
+                        <form action="#" method="get" class="profile__form">
+                            <div role="group" class="profile__info">
+                                <div class="profile__info-wrap">
+                                    <div class="profile__input">
+                                        <label for="email3">E-mail</label>
+                                        <input type="email" name="email" id="email3" value="" placeholder="verhovetskiy07@gmail.com">
+                                    </div>
+                                    <div class="profile__input">
+                                        <label for="name">Ваше имя</label>
+                                        <input type="text" name="name" id="name" value="" placeholder="Дмитрий">
+                                    </div>
+                                    <div class="profile__input">
+                                        <label for="tel">Телефон</label>
+                                        <input type="tel" name="tel" id="tel" value="" placeholder="8 (495) 657 88 00">
+                                    </div>
+                                    <div class="profile__input">
+                                        <label for="tel">ИНН</label>
+                                        <input type="number" name="inn" id="inn" value="" placeholder="00233502835860">
+                                    </div>
+                                    <div class="profile__input">
+                                        <label for="name2">Наименование получателя товаров</label>
+                                        <input type="text" name="name" id="name2" value="" placeholder="-">
+                                    </div>
+                                    <div class="profile__input">
+                                        <label for="discount">Персональная скидка</label>
+                                        <input type="text" name="discount" id="discount" value="" placeholder="5%">
+                                    </div>
+                                </div>
+                            </div>
+                            <div role="group" class="profile__password">
+                                <h2 class="profile__title">Пароль</h2>
+                                <div class="profile__input">
+                                    <input type="password" name="old-password" id="old-password" value="" placeholder="Старый пароль">
+                                </div>
+                                <div class="profile__input">
+                                    <input type="password" name="news-password" id="new-password" value="" placeholder="Новый пароль">
+                                </div>
+                                <div class="profile__input">
+                                    <input type="password" name="repeat-password" id="repeat-password2" value="" placeholder="Повторите пароль">
+                                </div>
+                                <button type="submit" class="profile__button">Сохранить</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="tabs__panel" id="history">
+                        <div class="history">
+                        {% set titles = ['Nissan', 'Mitsubishi'] %}
+                        {% for title in titles %}
+                            <h2 class="history__title">{{ title }}</h2>
+                            {% for i in range(2) %}
+                                <div class="history__card">
+                                    <div class="card__content">
+                                        <div class="card__image">
+                                            <img src="images/card-image.png" alt="{{ title }}">
+                                        </div>
+                                        <div class="card__data">
+                                            <h3 class="card__title">
+                                                {{ title }} Outlander  2,0
+                                            </h3>
+                                            <p class="card__subtitle">
+                                                2014-2022 передний привод
+                                            </p>
+                                            <p class="card__state">
+                                                Вариатор в сборе
+                                                <span>Новый</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="card__info">
+                                        <div class="card__info-col">
+                                            <span class="card__info-caption">Дата</span>
+                                            <span class="card__info-date"><time datetime="2019-06-25">25.06.2019</time></span>
+                                        </div>
+                                        <div class="card__info-col">
+                                            <span class="card__info-caption">Сумма</span>
+                                            <span class="card__info-sum">20 000 ₽</span>
+                                        </div>
+                                        <div class="card__info-col">
+                                            <span class="card__info-caption">Статус</span>
+                                            <span class="card__info-status {{ '-done' if loop.index === 2 }}">{{ 'В оплате' if loop.index === 1 else 'Оплачен' }}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

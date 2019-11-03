@@ -1,3 +1,5 @@
+{% from '../partials/_header.njk' import header with context %}
+
 <!doctype html>
 <html lang="ru">
 <head>
@@ -15,7 +17,11 @@
         <div class="content-wrapper">
             <header class="site-header" role="banner">
                 {% block header %}
-                    {% include 'partials/_header.njk' %}
+                    {% if headerLogin %}
+                        {{ header(login = true) }}
+                    {% else %}
+                        {{ header() }}
+                    {% endif %}
                 {% endblock %}
             </header>
             {% if breadcrumbs %}

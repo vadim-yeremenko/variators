@@ -1,0 +1,115 @@
+.profile {
+    $this: &;
+
+    &__form {
+        display: flex;
+        justify-content: space-between;
+
+        @include breakpoint(1080) {
+            align-items: center;
+            flex-direction: column;
+        }
+    }
+
+    &__info,
+    &__password {
+        background-color: $color-white;
+    }
+
+    &__info {
+        padding: 2.7rem 3rem 4rem;
+        width: calc(100% - 40rem);
+
+        @include breakpoint(1080) {
+            width: 100%;
+        }
+    }
+
+    &__info-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -1.8rem;
+    }
+
+    &__password {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        margin-left: 3rem;
+        padding: 3rem 3rem 4rem;
+        width: 37rem;
+
+        @include breakpoint(1080) {
+            margin: 3rem 0 0;
+        }
+
+        @include breakpoint(480) {
+            max-width: 37rem;
+            width: 100%;
+        }
+
+        #{$this}__input {
+            margin: 1rem 0 0;
+            width: 100%;
+        }
+    }
+
+    &__input {
+        display: flex;
+        flex-direction: column;
+        margin: 2rem 1.8rem 1rem;
+        width: calc(50% - 3.6rem);
+
+        @include breakpoint(640) {
+            width: calc(100% - 3.6rem);
+        }
+
+        label {
+            cursor: pointer;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+        }
+
+        input {
+            background-color: $color-2--4;
+            border: 0;
+            color: rgba($color-2--4, 0.5);
+            font-family: $typo-1;
+            font-size: 1.3rem;
+            font-weight: 500;
+            padding: 2.1rem;
+            width: 100%;
+        }
+
+        &:last-child {
+            label {
+                font-size: 1.5rem;
+                font-weight: 700;
+            }
+        }
+    }
+
+    &__title {
+        font-size: 1.8rem;
+        margin: 0 0 2rem;
+    }
+
+    &__button {
+        @include trs();
+        background-color: $color-1--1;
+        border: 0;
+        color: $color-white;
+        cursor: pointer;
+        font-family: $typo-1;
+        font-size: 1.4rem;
+        font-weight: 700;
+        margin: 3.5rem 0 0;
+        padding: 2rem 5.7rem;
+        text-transform: uppercase;
+        width: 100%;
+
+        @include on-event() {
+            background-color: $color-1--4;
+        }
+    }
+}

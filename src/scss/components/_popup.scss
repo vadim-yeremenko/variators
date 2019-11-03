@@ -1,4 +1,5 @@
 .popup {
+    $this: &;
     background-color: $color-white;
     margin: 0 auto;
     padding: 0;
@@ -46,6 +47,12 @@
                 }
             }
         }
+    }
+
+    &__input {
+        + #{$this}__input {
+            margin-top: 1rem;
+        }
 
         input {
             background-color: $color-2--4;
@@ -55,11 +62,11 @@
             font-size: 1.3rem;
             padding: 2.1rem 2rem;
             width: 100%;
-
-            + input {
-                margin-top: 1rem;
-            }
         }
+    }
+
+    &__checkbox {
+        margin: 1.8rem 0;
 
         input[type="checkbox"] {
             background: transparent;
@@ -99,11 +106,11 @@
                     transform: scale(0.75);
                     width: 1.2rem;
                 }
-                
+
                 a {
                     color: $color-1--1;
                     text-decoration: none;
-                    
+
                     @include on-event() {
                         text-decoration: underline;
                     }
@@ -117,10 +124,6 @@
                 }
             }
         }
-    }
-
-    &__checkbox {
-        margin: 1.8rem 0;
     }
 
     &__button {

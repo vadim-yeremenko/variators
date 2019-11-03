@@ -1,0 +1,133 @@
+.card {
+    &__content {
+        display: flex;
+        width: 35.5rem;
+
+        @include breakpoint(767) {
+            width: 25rem;
+        }
+    }
+
+    &__image {
+        margin-right: 1rem;
+
+        @include breakpoint(767) {
+            display: none;
+        }
+
+        img {
+            height: auto;
+            max-width: 11rem;
+            object-fit: cover;
+            width: 100%;
+        }
+    }
+
+    &__title {
+        font-size: 1.8rem;
+        margin: 0.2rem 0 1rem;
+    }
+
+    &__subtitle {
+        font-size: 1.2rem;
+        font-weight: 500;
+        margin: 0 0 2.2rem;
+    }
+
+    &__state {
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 2.2rem;
+        margin: 2.2rem 0 0;
+
+        span {
+            background-color: $color-2--4;
+            font-size: 1rem;
+            margin: 0 0 0 1.5rem;
+            padding: 0.5rem 1.2rem;
+        }
+    }
+
+    &__info {
+        display: flex;
+        padding: 3.5rem 0 0 6rem;
+        width: calc(100% - 35.5rem);
+
+        @include breakpoint(790) {
+            padding-left: 3rem;
+        }
+
+        @include breakpoint(767) {
+            padding-left: 2rem;
+            width: calc(100% - 25rem);
+        }
+
+        @include breakpoint(640) {
+            padding-left: 0;
+            width: 100%;
+        }
+    }
+
+    &__info-col {
+        display: flex;
+        flex-direction: column;
+        width: 10rem;
+
+        &:first-child {
+            width: 11.5rem;
+
+            @include breakpoint(480) {
+                width: 9rem;
+            }
+        }
+
+        &:nth-child(2) {
+            width: 10.5rem;
+            @include breakpoint(480) {
+                width: 9rem;
+            }
+        }
+
+        &:last-child {
+            width: calc(100% - 22rem);
+
+            @include breakpoint(480) {
+                width: calc(100% - 18rem);
+            }
+        }
+    }
+
+    &__info-caption {
+        font-size: 1.2rem;
+        font-weight: 500;
+        margin: 0 0 3rem;
+    }
+
+    &__info-date {
+        font-size: 1.4rem;
+        font-weight: 500;
+    }
+
+    &__info-sum {
+        font-size: 1.6rem;
+        font-weight: 900;
+
+        @include breakpoint(480) {
+            font-size: 1.4rem;
+        }
+    }
+
+    &__info-status {
+        color: $color-1--1;
+        font-size: 1.6rem;
+        font-weight: 900;
+
+        @include breakpoint(480) {
+            font-size: 1.4rem;
+        }
+
+        &.-done {
+            color: $color-3--1;
+        }
+    }
+}

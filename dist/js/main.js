@@ -4,14 +4,15 @@
 document.addEventListener('DOMContentLoaded', function() {
 
 // Menu
-    const menuBtn = document.querySelector('.menu-toggle');
-    const menu = document.querySelector('.menu');
+    var menuBtn = document.querySelector('.menu-toggle');
+    var menu = document.querySelector('.menu');
 
     if (menuBtn && menu) {
         menuBtn.addEventListener('click', function() {
             document.body.classList.toggle('menu-opened');
         });
     }
+
 //main slider	
     $(".slider-banner").slick({
     	// autoplay: true,
@@ -43,11 +44,43 @@ document.addEventListener('DOMContentLoaded', function() {
 	    dots: true,  
 	    arrows: false,
         // appendDots: '.banner__wrapper'
-	})
+	});
 
 // Fancybox
     $('[data-fancybox]').fancybox({
         smallBtn : false,
 		touch: false,
-    })
+    });
+
+// Tabs
+    function Tabs() {
+        var bindAll = function() {
+            var menuElements = document.querySelectorAll('[data-tab]');
+            for(var i = 0; i < menuElements.length ; i++) {
+                menuElements[i].addEventListener('click', change, false);
+            }
+        };
+
+        var clear = function() {
+            var menuElements = document.querySelectorAll('[data-tab]');
+            for(var i = 0; i < menuElements.length ; i++) {
+                menuElements[i].classList.remove('active');
+                var id = menuElements[i].getAttribute('data-tab');
+                document.getElementById(id).classList.remove('active');
+            }
+        };
+
+        var change = function(e) {
+            clear();
+            e.preventDefault();
+            e.target.classList.add('active');
+            var id = e.currentTarget.getAttribute('data-tab');
+            document.getElementById(id).classList.add('active');
+        };
+
+        bindAll();
+    }
+
+    var connectTabs = new Tabs();
+
 });

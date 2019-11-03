@@ -1,3 +1,5 @@
+
+
 <!doctype html>
 <html lang="ru">
 <head>
@@ -33,7 +35,7 @@
             
                 <li class="menu__item"><a href="page-news.html" class="menu__link">Статьи</a></li>
             
-                <li class="menu__item"><a href="#" class="menu__link">Личный кабинет</a></li>
+                <li class="menu__item"><a href="page-personal.html" class="menu__link">Личный кабинет</a></li>
             
         </ul>
     </nav>
@@ -42,39 +44,44 @@
         <div class="content-wrapper">
             <header class="site-header" role="banner">
                 
-                    <div class="header">
-    <div class="header__left">
-        <div class="header__menu-btn">
-            <button class="menu-toggle">
-                <span class="menu-toggle__lines">
-                    <span class="menu-toggle__line"></span>
-                    <span class="menu-toggle__line"></span>
-                    <span class="menu-toggle__line"></span>
-                </span>
-            </button>
-        </div>
-        <div class="header__logo">
-            <a href="index.html" class="logo">
+                    
+                        
+    <div class="header">
+        <div class="header__left">
+            <div class="header__menu-btn">
+                <button class="menu-toggle">
+                    <span class="menu-toggle__lines">
+                        <span class="menu-toggle__line"></span>
+                        <span class="menu-toggle__line"></span>
+                        <span class="menu-toggle__line"></span>
+                    </span>
+                </button>
+            </div>
+            <div class="header__logo">
+                <a href="index.html" class="logo">
                     <span class="logo__image">
                         <img src="images/logo2.png" alt="CVT Brothers">
                     </span>
-            </a>
+                </a>
+            </div>
+        </div>
+        <div class="header__right">
+            <div class="header__phone">
+                <a href="tel:84956578800" class="header__phone-link">8 (495) 657 88 00</a>
+            </div>
+            <div class="header__login ">
+                
+                    <a class="header__login-link" data-fancybox data-src="#enter" href="javascript:;">Личный кабинет</a>
+                
+            </div>
+            <div class="header__basket">
+                <a data-fancybox data-options='{"src": "#order", "smallBtn" : true}' href="javascript:;"  class="header__basket-btn "><span>3</span></a>
+            </div>
         </div>
     </div>
-    <div class="header__right">
-        <div class="header__phone">
-            <a href="tel:84956578800" class="header__phone-link">8 (495) 657 88 00</a>
-        </div>
-        <div class="header__login">
-            <a class="header__login-link" data-fancybox data-src="#enter" href="javascript:;">Личный кабинет</a>
-        </div>
-        <div class="header__basket">
-            <a data-fancybox data-options='{"src": "#order", "smallBtn" : true}' href="javascript:;"  class="header__basket-btn"><span class="hidden">Корзина</span></a>
-        </div>
-    </div>
-</div>
-<div class="header-fixed"></div>
+    <div class="header-fixed"></div>
 
+                    
                 
             </header>
             
@@ -191,11 +198,11 @@
     <form action="#" method="get" class="popup__form">
         <fieldset>
             <legend>Регистрация <a data-fancybox data-src="#enter" href="javascript:;">Вход</a></legend>
-            <input type="text" name="login" id="login" value="" placeholder="Логин">
-            <input type="email" name="email" id="email" value="" placeholder="E-mail">
-            <input type="tel" name="phone" id="phone" value="" placeholder="Телефон">
-            <input type="password" name="password" id="password" value="" placeholder="Пароль">
-            <input type="password" name="repeat-password" id="repeat-password" value="" placeholder="Пароль еще раз">
+            <div class="popup__input"><input type="text" name="login" id="login" value="" placeholder="Логин"></div>
+            <div class="popup__input"><input type="email" name="email" id="email" value="" placeholder="E-mail"></div>
+            <div class="popup__input"><input type="tel" name="phone" id="phone" value="" placeholder="Телефон"></div>
+            <div class="popup__input"><input type="password" name="password" id="password" value="" placeholder="Пароль"></div>
+            <div class="popup__input"><input type="password" name="repeat-password" id="repeat-password" value="" placeholder="Пароль еще раз"></div>
             <div class="popup__checkbox">
                 <input type="checkbox" id="agreement" name="agreement" checked>
                 <label for="agreement">Согласен с <a href="#">правилами сайта</a></label>
@@ -209,8 +216,8 @@
     <form action="#" method="get" class="popup__form">
         <fieldset>
             <legend>Вход<a data-fancybox data-src="#registration" href="javascript:;">Регистрация</a></legend>
-            <input type="text" name="login" id="login2" value="" placeholder="Логин">
-            <input type="password" name="password" id="password2" value="" placeholder="Пароль">
+            <div class="popup__input"><input type="text" name="login" id="login2" value="" placeholder="Логин"></div>
+            <div class="popup__input"><input type="password" name="password" id="password2" value="" placeholder="Пароль"></div>
             <a data-fancybox data-src="#recovery" href="javascript:;" class="popup__question">Забыли пароль?</a>
             <button type="submit" class="popup__button">Войти</button>
         </fieldset>
@@ -221,7 +228,7 @@
     <form action="#" method="get" class="popup__form">
         <fieldset>
             <legend>Восстановление пароля</legend>
-            <input type="email" name="email" id="email2" value="" placeholder="E-mail">
+            <div class="popup__input"><input type="email" name="email" id="email2" value="" placeholder="E-mail"></div>
             <button type="submit" class="popup__button">Применить</button>
         </fieldset>
     </form>

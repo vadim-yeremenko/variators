@@ -10,7 +10,7 @@
     width: 10rem;
 
     @include on-event() {
-        background-color: #be252e;
+        background-color: $color-1--5;
 
         @include breakpoint(767) {
             background-color: transparent;

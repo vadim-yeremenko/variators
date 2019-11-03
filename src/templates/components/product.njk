@@ -1,0 +1,65 @@
+{% macro product() %}
+	<section class="product">
+		<div class="container">
+			<div class="product__content">							
+				{% for item in range(2) %}
+					<div class="product__item">
+						<div class="product__top js-accordion">
+							<h2 class="product__title">Nissan Qashkai 2,0 </h2>
+							<p class="product__text">2008-2011 полный привод</p>
+							<div class="product__img">
+								<img src="/images/car.png">
+							</div>
+						</div>
+						<div class="product__bottom">
+							<p class="product__text -mt">2008-2011 полный привод</p>
+							<div class="product__form">
+								<form name="product-form">
+									{% for block in range(3) %}
+										<div class="product__part">
+											<div class="product__left">
+												<div class="product__head">
+													<p class="product__text -fs-13 td -first-column">Наименования</p>
+													<p class="product__text -fs-13 td">Номер</p>
+												</div>
+												<div class="product__block">
+													<p class="product__text -bold td -first-column">Вариатор в сборе</p>
+													<p class="product__text td">Ws67890</p>
+												</div>
+											</div>
+											<div class="product__right">
+												<div class="product__head">
+													<p class="product__text -fs-13 td">Новый</p>
+													<p class="product__text -fs-13 td">Б/у</p>
+													<p class="product__text -fs-13 td">Восстановленный</p>
+												</div>
+												<div class="product__block">													
+													<div class="product__checkbox td">
+										                <input type="checkbox" id="price1{{ block + item }}" name="price" checked>
+										                <label for="price1{{ block * item }}">10 000 ₽</label>
+										            </div>
+													<div class="product__checkbox td">
+										                <input type="checkbox" id="price2{{ block + item }}" name="price">
+										                <label for="price2{{ block * item }}">7 000 ₽</label>
+										            </div>
+										            <div class="product__checkbox td">
+										                <input type="checkbox" id="price3{{ block + item }}" name="price">
+										                <label for="price3{{ block + item }}">5 000 ₽</label>
+										            </div>
+												</div>
+											</div>
+										</div>
+									{% endfor %}
+									<div class="product__submit">
+										<button type="submit">В КОРЗИНУ</button>
+									</div>
+								</form>
+							</div>
+						</div>					
+											
+					</div>	
+				{% endfor %}				
+			</div>
+		</div>
+	</section>
+{% endmacro %}

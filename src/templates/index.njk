@@ -2,6 +2,7 @@
 {% extends 'layouts/_layout.njk' %}
 {% from 'components/banner.njk' import banner with context %}
 {% from 'components/quick-links.njk' import quickLinks with context %}
+{% from 'components/product.njk' import product with context %}
 {% from 'components/service.njk' import service with context %}
 {% from 'components/brand-text.njk' import brandText with context %}
 
@@ -9,6 +10,7 @@
 	{{ banner() }}
     {{ quickLinks() }}
     {{ brandText(brand = 'Nissan') }}
+    {{ product() }}
     {{ service() }}
 	<div class="map">
         <img src="../images/map.png" alt="Карта">

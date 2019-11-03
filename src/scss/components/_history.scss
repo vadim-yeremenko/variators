@@ -8,7 +8,7 @@
     }
 
     &__title {
-        font-size: 1.8rem;
+        font-size: 2.5rem;
         font-weight: 700;
         margin: 1rem 0 2rem;
         
@@ -21,10 +21,12 @@
         background-color: $color-white;
         display: inline-flex;
         padding: 3rem 3rem 3.5rem 2rem;
+        width: 100%;
 
         @include breakpoint(640) {
             flex-direction: column;
             margin: 0 auto;
+            padding: 3rem 2rem;
         }
 
         + #{$this}__card {

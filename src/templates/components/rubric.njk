@@ -1,5 +1,5 @@
-{% macro rubric(title = 'Шаблон страницы', teaser = true) %}
-    <div class="rubric">
+{% macro rubric(title = 'Шаблон страницы', teaser = true, modifier) %}
+    <div class="rubric {{ modifier }}">
         <h1 class="rubric__title">
             {{ title }}
         </h1>

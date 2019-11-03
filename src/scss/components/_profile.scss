@@ -73,12 +73,16 @@
         input {
             background-color: $color-2--4;
             border: 0;
-            color: rgba($color-2--4, 0.5);
+            color: rgba($color-2--1, 0.5);
             font-family: $typo-1;
             font-size: 1.3rem;
             font-weight: 500;
             padding: 2.1rem;
             width: 100%;
+
+            &::placeholder {
+                color: rgba($color-2--1, 0.5);
+            }
         }
 
         &:last-child {

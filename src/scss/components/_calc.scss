@@ -1,0 +1,53 @@
+.calc {
+    background-color: $color-2--4;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-top: -1rem;
+    width: 8rem;
+
+    @include breakpoint(640) {
+        width: 7rem;
+    }
+
+    &__btn {
+        @include trs();
+        background-color: transparent;
+        border: 0;
+        cursor: pointer;
+        height: 3.6rem;
+        padding: 1.3rem 1rem;
+        position: relative;
+        width: 3rem;
+
+        @include on-event() {
+            background-color: rgba($color-2--2, 0.5);
+        }
+
+        &::before {
+            left: 50%;
+            line-height: 0;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        &.-plus {
+            &::before {
+                content: url('../images/icon-plus.svg');
+            }
+        }
+
+        &.-minus {
+            &::before {
+                content: url('../images/icon-minus.svg');
+            }
+        }
+    }
+
+    &__amount {
+        font-size: 1.3rem;
+        font-weight: 500;
+        line-height: 1;
+    }
+}

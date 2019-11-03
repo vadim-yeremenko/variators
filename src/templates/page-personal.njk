@@ -1,6 +1,7 @@
 {% set headerLogin = true %}
 {% extends 'layouts/_layout.njk' %}
 {% from 'components/rubric.njk' import rubric with context %}
+{% from 'components/history-card.njk' import historyCard with context %}
 
 {% block content %}
     <section class="wrapper-inner">
@@ -30,7 +31,7 @@
                                     </div>
                                     <div class="profile__input">
                                         <label for="tel">ИНН</label>
-                                        <input type="number" name="inn" id="inn" value="" placeholder="00233502835860">
+                                        <input type="text" name="inn" id="inn" value="" placeholder="00233502835860">
                                     </div>
                                     <div class="profile__input">
                                         <label for="name2">Наименование получателя товаров</label>
@@ -58,47 +59,7 @@
                         </form>
                     </div>
                     <div class="tabs__panel" id="history">
-                        <div class="history">
-                        {% set titles = ['Nissan', 'Mitsubishi'] %}
-                        {% for title in titles %}
-                            <h2 class="history__title">{{ title }}</h2>
-                            {% for i in range(2) %}
-                                <div class="history__card">
-                                    <div class="card__content">
-                                        <div class="card__image">
-                                            <img src="images/card-image.png" alt="{{ title }}">
-                                        </div>
-                                        <div class="card__data">
-                                            <h3 class="card__title">
-                                                {{ title }} Outlander  2,0
-                                            </h3>
-                                            <p class="card__subtitle">
-                                                2014-2022 передний привод
-                                            </p>
-                                            <p class="card__state">
-                                                Вариатор в сборе
-                                                <span>Новый</span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="card__info">
-                                        <div class="card__info-col">
-                                            <span class="card__info-caption">Дата</span>
-                                            <span class="card__info-date"><time datetime="2019-06-25">25.06.2019</time></span>
-                                        </div>
-                                        <div class="card__info-col">
-                                            <span class="card__info-caption">Сумма</span>
-                                            <span class="card__info-sum">20 000 ₽</span>
-                                        </div>
-                                        <div class="card__info-col">
-                                            <span class="card__info-caption">Статус</span>
-                                            <span class="card__info-status {{ '-done' if loop.index === 2 }}">{{ 'В оплате' if loop.index === 1 else 'Оплачен' }}</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            {% endfor %}
-                        {% endfor %}
-                        </div>
+                        {{ historyCard() }}
                     </div>
                 </div>
             </div>

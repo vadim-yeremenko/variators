@@ -1,0 +1,192 @@
+.checkout {
+    background-color: $color-white;
+    margin-top: -2rem;
+    max-width: 77rem;
+    padding: 3.5rem 3rem 0;
+
+    @include breakpoint(1190) {
+        margin: -2rem auto 0;
+    }
+
+    &__title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin: 0 0 2.5rem;
+
+        span {
+            color: rgba($color-2--1, 0.5);
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-left: 2rem;
+            
+            @include breakpoint(640) {
+                display: block;
+                margin: 0.5rem 0 0;
+            }
+        }
+    }
+
+    &__radio,
+    &__inputs {
+        display: flex;
+
+        @include breakpoint(660) {
+            flex-direction: column;
+        }
+    }
+
+    &__radio {
+        margin-bottom: 2.5rem;
+
+        div {
+            position: relative;
+
+            @include breakpoint(660) {
+                margin-bottom: 1rem;
+            }
+        }
+
+        input[type="radio"] {
+            background: transparent;
+            border: 0;
+            left: 0;
+            opacity: 0;
+            padding: inherit;
+            pointer-events: none;
+            position: absolute;
+            width: auto;
+
+            &:checked + label {
+                &::after {
+                    opacity: 1;
+                    transform: scale(1);
+                }
+            }
+        }
+
+        label {
+            cursor: pointer;
+            display: inline-block;
+            font-weight: 500;
+            padding: 0.4rem 3rem;
+            position: relative;
+
+            &::before {
+                background-color: #f7f8f9;
+                border-radius: 50%;
+                content: '';
+                box-sizing: border-box;
+                height: 2.3rem;
+                left: 0;
+                position: absolute;
+                speak: none;
+                top: 0;
+                width: 2.3rem;
+            }
+
+            &::after {
+                @include trs();
+                border: 0.6rem solid $color-1--1;
+                border-radius: 50%;
+                content: '';
+                height: 2.3rem;
+                left: 0;
+                opacity: 0;
+                position: absolute;
+                top: 0;
+                transform: scale(0.75);
+                width: 2.3rem;
+            }
+        }
+    }
+
+    &__inputs {
+        margin: 0 -1.2rem 4.5rem;
+
+        &.-secondary {
+            margin: 0 -2rem 4.5rem;
+
+            div {
+                margin: 0 2rem;
+
+                @include breakpoint(660) {
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+
+        div {
+            margin: 0 1.2rem;
+            position: relative;
+
+            @include breakpoint(660) {
+                margin-bottom: 1rem;
+            }
+        }
+
+        input,
+        select {
+            background-color: $color-2--4;
+            border: 0;
+            color: rgba($color-2--1, 0.5);
+            font-family: $typo-1;
+            font-size: 1.3rem;
+            font-weight: 500;
+            padding: 2.1rem;
+            width: 100%;
+
+            &::placeholder {
+                color: rgba($color-2--1, 0.5);
+                font-weight: 500;
+            }
+        }
+
+        select {
+            -webkit-appearance: none !important;
+            -moz-appearance: none !important;
+            appearance: none !important;
+            background-image: url('../images/select-arrow.svg');
+            background-position: -webkit-calc(100% - 0.75em) 50%;
+            background-position: calc(100% - 1em) 50%;
+            background-repeat: no-repeat;
+            background-size: 8px;
+            cursor: pointer;
+            min-width: 18.5rem;
+
+            @include breakpoint(767) {
+                min-width: 15rem;
+            }
+        }
+
+        input#street {
+            min-width: 25rem;
+
+            @include breakpoint(767) {
+                min-width: 15rem;
+            }
+        }
+    }
+
+    &__button {
+        @include trs();
+        background-color: $color-1--1;
+        border: 0;
+        color: $color-white;
+        cursor: pointer;
+        display: block;
+        font-family: $typo-1;
+        font-size: 1.4rem;
+        font-weight: 700;
+        margin: 0 -3rem 0 auto;
+        padding: 2rem 8.2rem;
+        text-transform: uppercase;
+
+        @include on-event() {
+            background-color: $color-1--4;
+        }
+
+        @include breakpoint(480) {
+            padding: 2rem 4rem;
+        }
+    }
+}

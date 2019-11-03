@@ -2,9 +2,23 @@
     margin: 0 0 5.5rem;
     position: relative;
     z-index: 1;
+    $this: &;
 
     @include breakpoint(767) {
         margin-bottom: 3.5rem;
+    }
+
+    &.-center-tablet {
+        #{$this}__title {
+            @include breakpoint(1190) {
+                text-align: center;
+
+                &::before {
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+        }
     }
 
     &__title {

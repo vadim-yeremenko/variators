@@ -1,0 +1,103 @@
+{% set headerLogin = true %}
+{% extends 'layouts/_layout.njk' %}
+{% from 'components/rubric.njk' import rubric with context %}
+{% from 'components/history-card.njk' import historyCard with context %}
+
+{% block content %}
+    <section class="wrapper-inner">
+        <div class="container -page">
+            {{ rubric(title = 'Ваша корзина', teaser = false, modifier = '-center-tablet') }}
+            <div class="order">
+                <div class="order__wrapper">
+                    {{ historyCard(order = true, btnClose = true) }}
+                    <div class="promo">
+                        <form action="" class="promo__form">
+                            <h2 class="promo__title">Промокод</h2>
+                            <div class="promo__input">
+                                <input type="text" name="promo" id="promo" value="" placeholder="Введите промокод">
+                            </div>
+                            <button type="submit" class="promo__button">Применить</button>
+                            <div class="promo__info">
+                                <p class="promo__discount">Скидка:  5%</p>
+                                <p class="promo__delivery">Доставка:  <strong>1000 ₽</strong></p>
+                                <p class="promo__total">Итого:  <strong>42 750 ₽</strong></p>
+                            </div>
+                            <button type="submit" class="promo__button">Оформить заказ</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            {{ rubric(title = 'Оформление заказа', teaser = false, modifier = '-center-tablet') }}
+            <div class="checkout">
+                <form action="" class="checkout__form">
+                    <div role="group" class="checkout__wrapper">
+                        <h3 class="checkout__title">Доставка</h3>
+                        <div class="checkout__radio">
+                            <div>
+                                <input type="radio" id="radio1" value="" name="group1" checked>
+                                <label for="radio1">Курьером по Москве</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="radio2" name="group1" value="">
+                                <label for="radio2">Самовывоз</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="radio3" name="group1" value="">
+                                <label for="radio3">Транспортная компания</label>
+                            </div>
+                        </div>
+                        <div class="checkout__inputs">
+                            <div>
+                                <select name="select">
+                                    <option>Город</option>
+                                    <option>Москва</option>
+                                </select>
+                            </div>
+                            <div>
+                                <input type="text" id="street" name="street" value="" placeholder="Улица">
+                            </div>
+                            <div>
+                                <input type="text" id="house" name="house" value="" placeholder="Дом">
+                            </div>
+                            <div>
+                                <input type="text" id="housing" name="housing" value="" placeholder="Корпус">
+                            </div>
+                        </div>
+                        <h3 class="checkout__title">Данные покупателя <span>* поля обязательные для заполнения</span></h3>
+                        <div class="checkout__inputs -secondary">
+                            <div>
+                                <input type="text" name="login" id="login3" value="" placeholder="Имя *">
+                            </div>
+                            <div>
+                                <input type="tel" name="phone" id="phone4" value="" placeholder="Телефон *">
+                            </div>
+                            <div>
+                                <input type="email" name="email" id="email4" value="" placeholder="E-mail *">
+                            </div>
+                        </div>
+                        <h3 class="checkout__title">Оплата</h3>
+                        <div class="checkout__radio">
+                            <div>
+                                <input type="radio" id="radio4" value="" name="group2" checked>
+                                <label for="radio4">На сайте</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="radio5" name="group2" value="">
+                                <label for="radio5">Выставить счет</label>
+                            </div>
+                        </div>
+                        <div class="checkout__inputs -secondary">
+                            <div>
+                                <input type="text" name="login" id="login4" value="" placeholder="Плательщик">
+                            </div>
+                            <div>
+                                <input type="text" name="inn" id="inn2" value="" placeholder="ИНН">
+                            </div>
+                        </div>
+                        <button data-fancybox data-options='{"src": "#order", "smallBtn" : true}' href="javascript:;" type="submit" class="checkout__button">Оформить заказ</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+{% endblock %}

@@ -50,4 +50,13 @@ document.addEventListener('DOMContentLoaded', function() {
         smallBtn : false,
 		touch: false,
     })
+
+//accordion    
+  $(".js-accordion").on("click", function (e) {
+    let el = $(this).parent();
+    el.find(".product__bottom").toggleClass("-is-active");
+    $(this).toggleClass("-is-active");
+    $(".product__bottom").not(el.find(".product__bottom")).removeClass("-is-active");
+    $(".js-accordion").not(this).removeClass("-is-active");
+  })
 });

@@ -3102,9 +3102,9 @@ button:focus {
     max-height: 0;
     overflow: hidden;
     padding: 0 2rem 0 3.8rem;
-    -webkit-transition: all 0.2s;
-    -o-transition: all 0.2s;
-    transition: all 0.2s; }
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s; }
     @media screen and (max-width: 767px) {
       .product__bottom {
         padding: 0 1.5rem; } }

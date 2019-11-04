@@ -22,18 +22,3 @@
 @mixin trs($prop: all, $duration: 250ms, $easing: ease-in-out, $delay: 0ms) {
     transition: $prop $duration $easing $delay;
 }
-
-@mixin on-event($self: false) {
-    @if $self {
-        &,
-        &:hover,
-        &:focus {
-            @content;
-        }
-    } @else {
-        &:hover,
-        &:focus {
-            @content;
-        }
-    }
-}

@@ -27,11 +27,6 @@ gulp.task('browser-sync', function() { /*Автоматическое отраж
         },
         notify: false
     });
-
-    // gulp.watch('src/scss/**/*.scss', ['scss']);
-    // gulp.watch('src/templates/**/*.njk', ['njk']);
-    // gulp.watch('src/*.html').on('change', browserSync.reload);
-    // gulp.watch('src/scss/**/*.scss').on('change', browserSync.reload);
 });
 
 gulp.task('scss', function() {               /*Компиляция SCSS файла в CSS с browserSync*/

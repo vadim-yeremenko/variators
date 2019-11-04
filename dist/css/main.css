@@ -3056,7 +3056,7 @@ button:focus {
         display: block;
         padding: 2rem 5rem 2rem 1.5rem; } }
     .product__top::before {
-      content: url("../images/plus.png");
+      content: url("../images/plus.svg");
       position: absolute;
       top: 50%;
       right: 4.8rem;

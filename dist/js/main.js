@@ -1,6 +1,3 @@
-// import 'jquery';
-// import 'slick-carousel/slick/slick.min.js'
-
 document.addEventListener('DOMContentLoaded', function () {
 
 // Menu
@@ -15,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 //main slider	
     $(".slider-banner").slick({
-        // autoplay: true,
+        autoplay: true,
         autoplaySpeed: 4000,
         speed: 1500,
         slidesToScroll: 1,
@@ -31,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 //service slider	
     $(".slider-service").slick({
-        // autoplay: true,
+        autoplay: true,
         autoplaySpeed: 4000,
         fade: true,
         speed: 1500,
@@ -91,5 +88,8 @@ document.addEventListener('DOMContentLoaded', function () {
         $(".product__bottom").not(el.find(".product__bottom")).removeClass("-is-active");
         $(".js-accordion").not(this).removeClass("-is-active");
     });
+
+// Inputmask
+    $('input[type=tel]').inputmask();
 
 });

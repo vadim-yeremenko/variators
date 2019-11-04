@@ -55,7 +55,7 @@
 
     &__text {
         font-weight: 500;
-        line-height: 1.8;
+        line-height: 2;
         margin: 2.5rem 0;
 
         @include breakpoint(767) {
@@ -194,6 +194,15 @@
 
         @include breakpoint(767) {
             margin: 2.7rem 0;
+        }
+    }
+
+    &.-home {
+        margin: 7rem 0;
+        
+        @include breakpoint(767) {
+            margin: 3rem 0;
+            text-align: center;
         }
     }
 }

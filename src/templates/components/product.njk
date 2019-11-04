@@ -36,11 +36,11 @@
 												<div class="product__block">													
 													<div class="product__checkbox td">
 										                <input type="checkbox" id="price1{{ block + item }}" name="price" checked>
-										                <label for="price1{{ block * item }}">10 000 ₽</label>
+										                <label for="price1{{ block + item }}">10 000 ₽</label>
 										            </div>
 													<div class="product__checkbox td">
 										                <input type="checkbox" id="price2{{ block + item }}" name="price">
-										                <label for="price2{{ block * item }}">7 000 ₽</label>
+										                <label for="price2{{ block + item }}">7 000 ₽</label>
 										            </div>
 										            <div class="product__checkbox td">
 										                <input type="checkbox" id="price3{{ block + item }}" name="price">
@@ -51,7 +51,7 @@
 										</div>
 									{% endfor %}
 									<div class="product__submit">
-										<button type="submit">В КОРЗИНУ</button>
+										<button type="submit">В корзину</button>
 									</div>
 								</form>
 							</div>

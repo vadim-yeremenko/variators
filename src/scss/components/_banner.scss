@@ -39,7 +39,7 @@
 		left: 55%;
 		transform: translateX(-50%);
 
-		@include breakpoint(1170) {
+		@include breakpoint(1192) {
 			left: 50%;
 			width: 85%;
 		}
